@@ -1,0 +1,20 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import Navigation from "../components/Navigation.astro";
+import HeroSection from "../layouts/HeroSection.astro";
+import AboutHero from "../layouts/AboutHero.astro";
+import Footer from "../layouts/Footer.astro";
+---
+
+<MainLayout title="About Us | CodeNHammer">
+
+	<Navigation></Navigation>
+	<HeroSection>
+		<h1 class="mb-4 text-4xl font-sans font-bold tracking-tight leading-none text-zinc-200 md:text-5xl lg:text-6xl">Building Better Websites</h1>
+		<p class="mb-8 font-light text-zinc-400 text-md md:text-lg lg:text-xl sm:px-16">CodeNHammer is dedicated to providing high-quality websites for contractors, simplifying their online presence.</p>
+	</HeroSection>
+	<AboutHero></AboutHero>
+		
+	<Footer></Footer>
+	
+</MainLayout>

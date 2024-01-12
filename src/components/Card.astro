@@ -1,0 +1,48 @@
+---
+interface Props {
+    paragraph: string;
+    header: string;
+    href: string;
+};
+
+const {paragraph} = Astro.props;
+const {header} = Astro.props;
+const {href} = Astro.props;
+---
+
+<div class="grid p-px rounded-lg border-2 border-gray-800">
+  
+    <slot name="card-image"/>
+    
+    <!-- Card Info Start -->
+    <div class="space-y-6 p-2 grid justify-items-stretch">
+
+        <!-- Header & Paragraph Container Start -->
+        <div class="space-y-3 md:space-y-2">
+
+            <!-- Header & Paragraph Start -->
+            <h3 class="text-xl font-semibold leading-tight text-zinc-200 md:text-2xl">
+            {header}
+            </h3>
+
+            <p class="line-clamp-2 text-sm text-gray-400">
+            {paragraph}
+            </p>
+            <!-- Header & Paragraph Ends -->
+
+        </div>
+        <!-- Header & Paragraph Container Ends -->
+
+        <!-- Link Container Start -->
+        <a target="_blank" href={href} class="text-[#007BFF] rounded-md border-2 border-[#007BFF] hover:bg-[#007BFF]/10 font-medium flex justify-center text-sm px-5 py-2">
+            Visit
+            <svg class="size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24">
+                <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 7h10v10M7 17L17 7"/>
+            </svg>
+        </a>
+        <!-- Link Container Ends -->
+
+    </div>
+    <!-- Card Info Ends -->
+
+</div>

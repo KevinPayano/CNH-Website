@@ -1,0 +1,14 @@
+@font-face {
+  font-family: 'Geist';
+  font-style: normal;
+  font-weight: 400;
+  font-display: block; 
+  src: url('/fonts/GeistVF.woff2') format('woff2');
+}
+
+body {
+  background-size: 40px 40px;
+  background-image:
+    linear-gradient(to right, blue 10px, transparent 10px),
+    linear-gradient(to bottom, blue 10px, transparent 10px);
+}

@@ -1,0 +1,76 @@
+---
+import { Image } from "astro:assets";
+import Feature1Large from "../assets/Feature-1(Large).png";
+import Feature1Small from "../assets/Feature-1(Small).png";
+import Feature2 from "../assets/Feature-2.png";
+import Feature3 from "../assets/Feature-3.png";
+import Feature4 from "../assets/Feature-4.png";
+
+import Paragraph from "../components/Paragraph.astro";
+import Tagline from "../components/Tagline.astro";
+import Subheading from "../components/Subheading.astro";
+import H3 from "../components/H3.astro";
+---
+
+<section id="featuresSection" class="bg-zinc-950">
+    <div class="py-20 px-4 mx-auto max-w-screen-xl lg:px-12 lg:py-28">
+        <Tagline>Features</Tagline>
+        <Subheading>Everything you need.<br>Batteries included.</Subheading>
+        
+        <div class="relative gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+            
+            <div class="relative col-span-1 rounded-lg border-2 border-gray-800 md:col-span-2">
+                <Image class="hidden rounded-lg w-full object-scale-down md:block" src={Feature1Large} alt="Rocket ship in cyberspace"></Image>
+                <Image class="rounded-lg w-full object-scale-down md:hidden" src={Feature1Small} alt="Rocket ship in cyberspace"></Image>
+                <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-zinc-950 from-10% via-zinc-950 via-30% to-zinc-950/5 to-90%">
+                    <div class="p-4 absolute bottom-0 left-0">
+                        <H3>Fast, Responsive Design</H3>
+                        <Paragraph>Your online storefront should never be less than a blazingly fast, sleek and hassle-free website that makes it easy to interact with your business on any device.</Paragraph>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative col-span-1 rounded-lg border-2 border-gray-800">
+                <Image class="rounded-lg" src={Feature2} alt="Rocket ship in cyberspace"></Image>
+                <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-zinc-950 from-10% via-zinc-950 via-30% to-zinc-950/5 to-90%">
+                    <div class="p-4 absolute bottom-0 left-0">
+                        <H3>Transparent Pricing and Inclusive Hosting</H3>
+                        <Paragraph>With clear-cut pricing, inclusive hosting and flexible ongoing service, we give you the online platform to grow your business and simply focus on the work.</Paragraph>
+                    </div>
+                </div>
+            </div>
+
+            <div class="relative col-span-1 rounded-lg border-2 border-gray-800">
+                <Image class="rounded-lg" src={Feature3} alt="Rocket ship in cyberspace"></Image>
+                <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-zinc-950 from-10% via-zinc-950 via-30% to-zinc-950/5 to-90%">
+                    <div class="p-4 absolute bottom-0 left-0">
+                        <H3>Custom & Responsive</H3>
+                        <Paragraph>Work seamlessly across your organization on a platform designed for collaboration.</Paragraph>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="relative col-span-1 rounded-lg border-2 border-gray-800">
+                <Image class="rounded-lg" src={Feature4} alt="Rocket ship in cyberspace"></Image>
+                <div class="absolute inset-0 rounded-lg bg-gradient-to-t from-zinc-950 from-10% via-zinc-950 via-30% to-zinc-950/5 to-90%">
+                    <div class="p-4 absolute bottom-0 left-0">
+                        <H3>Powered by Google Analytics</H3>
+                        <Paragraph>We’re here to help your business grow, and we’ve got the data to prove it. Every website for contractors is backed by Google Analytics, along with those numbers you love to see.</Paragraph>
+                    </div>
+                </div>
+            </div>
+
+            <a href="/#pricingSection" class="relative h-80 col-span-1 rounded-lg border-2 border-[#007BFF] transition duration-150 ease-in bg-gradient-to-tr from-[#007BFF]/30 from-10% to-zinc-950 to-80% hover:to-[#007BFF]/10 hover:border-teal-100 md:h-auto">
+                <div class="absolute inset-0 rounded-lg">
+                    <div class="p-4 absolute grid grid-cols-4 bottom-0 left-0">
+                        <h3 class="text-xl font-bold col-span-3 md:mt-4 mb-2.5 text-zinc-200 sm:text-2xl">Kickstart your business with our custom websites</h3>
+                        <svg class="place-self-end w-5" width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M29.6968 2V30M29.6968 30H1.69678M29.6968 30L1.69678 2" stroke="#C3E3FF" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                            
+                    </div>
+                </div>
+            </a>
+
+        </div>
+    </div>
+</section>
