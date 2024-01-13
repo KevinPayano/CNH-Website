@@ -1,46 +1,14 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-  <defs>
-    <style>
-      .cls-1 {
-        stroke: #ededed;
-      }
-
-      .cls-1, .cls-2 {
-        fill: none;
-        stroke-linecap: round;
-        stroke-linejoin: round;
-      }
-
-      .cls-2 {
-        stroke: #007bff;
-      }
-    </style>
-  </defs>
-  <path class="cls-2" d="m55.02,52.83l.41.41c2.5,2.5.73,6.77-2.81,6.77H15.91"/>
-  <polyline class="cls-2" points="56.74 30.25 59.02 20.53 65.5 20.53"/>
-  <g>
-    <polygon class="cls-2" points="25.21 67.46 22.48 67.46 20.6 60.01 27.09 60.01 25.21 67.46"/>
-    <path class="cls-2" d="m26.39,62.75c1.25.82,2.07,2.24,2.07,3.84,0,2.56-2.07,4.62-4.62,4.62s-4.62-2.06-4.62-4.62c0-1.6.82-3.02,2.06-3.84"/>
-    <circle class="cls-2" cx="23.85" cy="65.75" r=".13"/>
-  </g>
-  <g>
-    <polygon class="cls-2" points="51.34 67.46 48.61 67.46 46.72 60.01 53.22 60.01 51.34 67.46"/>
-    <path class="cls-2" d="m52.52,62.75c1.25.82,2.07,2.24,2.07,3.84,0,2.56-2.07,4.62-4.62,4.62s-4.62-2.06-4.62-4.62c0-1.6.82-3.02,2.06-3.84"/>
-    <circle class="cls-2" cx="49.97" cy="65.75" r=".13"/>
-  </g>
-  <g>
-    <polygon class="cls-1" points="47.98 15.68 36.12 22.57 24.26 15.68 36.12 8.79 47.98 15.68"/>
-    <line class="cls-1" x1="47.97" y1="26.01" x2="47.97" y2="15.68"/>
-    <line class="cls-1" x1="24.25" y1="26.01" x2="24.25" y2="15.68"/>
-    <line class="cls-1" x1="36.12" y1="26.01" x2="36.12" y2="22.56"/>
-    <polyline class="cls-1" points="42.05 12.24 29.97 19 29.97 21.27"/>
-  </g>
-  <circle class="cls-1" cx="54.02" cy="41.4" r="8.36"/>
-  <line class="cls-2" x1="15.9" y1="29.92" x2="28.97" y2="29.92"/>
-  <line class="cls-2" x1="17.63" y1="35.05" x2="30.69" y2="35.05"/>
-  <line class="cls-2" x1="19.35" y1="40.18" x2="32.41" y2="40.18"/>
-  <line class="cls-2" x1="21.07" y1="45.31" x2="34.13" y2="45.31"/>
-  <polyline class="cls-1" points="49.63 42.23 52.01 44.6 58.41 38.2"/>
-  <polyline class="cls-2" points="57.74 26.01 47.97 26.01 36.12 26.01 24.25 26.01 14.5 26.01 22.28 49.58 45.97 49.58"/>
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M55.0202 52.8301L55.4302 53.2401C57.9302 55.7401 56.1602 60.0101 52.6202 60.0101H15.9102" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56.7402 30.25L59.0202 20.53H65.5002" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M26.3902 62.75C27.6402 63.57 28.4602 64.99 28.4602 66.59C28.4602 69.15 26.3902 71.21 23.8402 71.21C21.2902 71.21 19.2202 69.15 19.2202 66.59C19.2202 64.99 20.0402 63.57 21.2802 62.75M25.2102 67.46H22.4802L20.6002 60.01H27.0902L25.2102 67.46ZM23.9802 65.75C23.9802 65.8218 23.922 65.88 23.8502 65.88C23.7784 65.88 23.7202 65.8218 23.7202 65.75C23.7202 65.6782 23.7784 65.62 23.8502 65.62C23.922 65.62 23.9802 65.6782 23.9802 65.75Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M52.5201 62.75C53.7701 63.57 54.5901 64.99 54.5901 66.59C54.5901 69.15 52.5201 71.21 49.9701 71.21C47.4201 71.21 45.3501 69.15 45.3501 66.59C45.3501 64.99 46.1701 63.57 47.4101 62.75M51.3401 67.46H48.6101L46.7201 60.01H53.2201L51.3401 67.46ZM50.1001 65.75C50.1001 65.8218 50.0419 65.88 49.9701 65.88C49.8983 65.88 49.8401 65.8218 49.8401 65.75C49.8401 65.6782 49.8983 65.62 49.9701 65.62C50.0419 65.62 50.1001 65.6782 50.1001 65.75Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M47.97 26.01V15.68M24.25 26.01V15.68M36.12 26.01V22.56M42.05 12.24L29.97 19V21.27M47.98 15.68L36.12 22.57L24.26 15.68L36.12 8.79004L47.98 15.68Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M54.0202 49.76C58.6373 49.76 62.3802 46.0171 62.3802 41.4C62.3802 36.7829 58.6373 33.04 54.0202 33.04C49.4031 33.04 45.6602 36.7829 45.6602 41.4C45.6602 46.0171 49.4031 49.76 54.0202 49.76Z" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.8999 29.9199H28.9699" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M17.6299 35.05H30.6899" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.3501 40.1799H32.4101" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M21.0698 45.3101H34.1298" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M49.6299 42.2299L52.0099 44.5999L58.4099 38.2" stroke="#EDEDED" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.74 26.01H47.97H36.12H24.25H14.5L22.28 49.58H45.97" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
 </svg>
