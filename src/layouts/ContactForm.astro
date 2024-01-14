@@ -14,16 +14,17 @@ import Tagline from "../components/Tagline.astro";
             
             <form name="contact" method="POST" action="/thankyou" data-netlify="true" class="space-y-8">
                 <div>
-                    <label for="email" class="block mb-2 text-sm font-medium text-zinc-200">Your email</label>
-                    <input type="email" name="email" id="email" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 text-sm block w-full p-2.5" placeholder="name@email.com" required>
+                    <label for="subject" class="block mb-2 text-sm font-medium text-zinc-200">Full Name</label>
+                    <input type="text" name="name" id="name" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 block p-3 w-full text-sm" placeholder="John Doe" required>
                 </div>
                 <div>
-                    <label for="subject" class="block mb-2 text-sm font-medium text-zinc-200">Subject</label>
-                    <input type="text" name="subject" id="subject" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 block p-3 w-full text-sm" placeholder="Let us know how we can help you" required>
+                    <label for="email" class="block mb-2 text-sm font-medium text-zinc-200">Email Address</label>
+                    <input type="email" name="email" id="email" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 text-sm block w-full p-2.5" placeholder="name@email.com" required>
                 </div>
+                
                 <div class="sm:col-span-2">
-                    <label for="message" class="block mb-2 text-sm font-medium text-zinc-200">Your message</label>
-                    <textarea id="message" name="message" rows="6" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 block p-2.5 w-full text-sm" placeholder="Leave a message..." required></textarea>
+                    <label for="message" class="block mb-2 text-sm font-medium text-zinc-200">Message</label>
+                    <textarea id="message" name="message" rows="6" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 block p-2.5 w-full text-sm" placeholder="How we can help you?" required></textarea>
                 </div>
                 <button type="submit" class="inline-flex items-center justify-center px-6 py-3 text-base text-center text-white rounded-md bg-[#007BFF] hover:bg-[#0070E8]">
                     Send 
