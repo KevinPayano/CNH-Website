@@ -12,9 +12,7 @@ import Tagline from "../components/Tagline.astro";
                 <Paragraph>Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</Paragraph>
             </div>
             
-            <form action="https://formsubmit.co/hello@codenhammer.com" method="POST" class="space-y-8">
-                <input type="hidden" name="_next" value="/thankyou.html">
-                <input type="hidden" name="_captcha" value="false">
+            <form name="contact" method="POST" data-netlify="true" class="space-y-8">
                 <div>
                     <label for="email" class="block mb-2 text-sm font-medium text-zinc-200">Your email</label>
                     <input type="email" name="email" id="email" class="border-2 border-gray-800 bg-zinc-950 rounded-md text-zinc-200 text-sm block w-full p-2.5" placeholder="name@email.com" required>
