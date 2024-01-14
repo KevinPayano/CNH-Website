@@ -1,5 +1,6 @@
 ---
 const {title} = Astro.props;
+const {metaDescription} = Astro.props;
 ---
 
 <html lang="en" class="scroll-smooth">
@@ -10,6 +11,7 @@ const {title} = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+		<meta name="description" content={metaDescription} />
 	</head>
 	<body class="bg-zinc-950">
 		<slot>
