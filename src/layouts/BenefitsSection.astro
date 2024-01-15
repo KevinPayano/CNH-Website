@@ -1,4 +1,9 @@
 ---
+import { Image } from "astro:assets";
+import Benefit1 from "../assets/Benefit-1.png";
+import Benefit2 from "../assets/Benefit-2.png";
+import Benefit3 from "../assets/Benefit-3.png";
+
 import Paragraph from "../components/Paragraph.astro";
 import H3 from "../components/H3.astro";
 import Tagline from "../components/Tagline.astro";
@@ -17,7 +22,7 @@ import Subheading from "../components/Subheading.astro";
             <div class=" mb-6 space-y-10 *:cursor-pointer">
                 
                 <!-- Tab 1 -->
-                <div class="flex p-6 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 0 }" @click="activeTab = 0">
+                <div class="flex p-6 border-2 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 0 }" @click="activeTab = 0">
                     <div class="flex justify-center items-center mr-4 size-14 shrink-0">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M59.72 44.4299V60.3899C59.72 61.2499 59.03 61.9599 58.16 61.9599H10.07C9.21 61.9599 8.5 61.2599 8.5 60.3899V26.2299C8.5 25.3699 9.2 24.6599 10.07 24.6599H46.06M45.15 30.8499H8.5" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,7 +50,7 @@ import Subheading from "../components/Subheading.astro";
                 </div>
 
                 <!-- Tab 2 -->
-                <div class="flex p-6 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 1 }" @click="activeTab = 1">
+                <div class="flex p-6 border-2 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 1 }" @click="activeTab = 1">
                     <div class="flex justify-center items-center mr-4 size-14 shrink-0">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M32.6602 64.09V70.74L50.2602 66.3701V62.5801C50.2602 59.3901 50.9602 56.2201 52.3202 53.3301L52.3402 53.28C52.3402 53.28 54.9502 48.76 55.9102 43.55" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
@@ -65,7 +70,7 @@ import Subheading from "../components/Subheading.astro";
                 </div>
 
                 <!-- Tab 3 -->
-                <div class="flex p-6 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 2 }" @click="activeTab = 2">
+                <div class="flex p-6 border-2 rounded-lg bg-[#007BFF]/10 hover:bg-blue-500/20" :class="{'bg-blue-500/20 border-2 border-[#007BFF]': activeTab === 2 }" @click="activeTab = 2">
                     <div class="flex justify-center items-center mr-4 size-14 shrink-0">
                         <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M24.3098 63.3901V61.7501C24.3098 61.4401 24.1698 61.1501 23.9398 60.9601L12.3698 51.3701C11.1898 50.4001 10.5098 48.9501 10.5098 47.4201V23.7901C10.5098 22.4401 11.6098 21.3401 12.9598 21.3401C14.1798 21.3401 15.2098 22.2301 15.3798 23.4301L17.8498 40.3101M36.3098 63.3901V56.3901C36.3098 54.2201 35.3198 52.1701 33.6198 50.8301L20.8298 40.7001C19.7998 39.8801 18.3098 40.0001 17.4298 40.9801C16.4898 42.0101 16.5798 43.6101 17.6198 44.5401L24.3098 50.4501M36.9298 68.7101V63.3901H21.1898V68.7101" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
@@ -86,10 +91,10 @@ import Subheading from "../components/Subheading.astro";
         <!-- Left Side Ends -->
 
         <!-- Right Side Starts -->
-        <div class="relative">
-            <img class="grayscale mb-4 w-full lg:mb-0 rounded-lg" :class="{ 'active': activeTab === 0 }" x-show.transition.in.opacity.duration.600="activeTab === 0" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-long.png" alt="feature image">
-            <img class="sepia mb-4 w-full lg:mb-0 rounded-lg" :class="{ 'active': activeTab === 1 }" x-show.transition.in.opacity.duration.600="activeTab === 1" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-long.png" alt="feature image">
-            <img class="mb-4 w-full lg:mb-0 rounded-lg" :class="{ 'active': activeTab === 2 }" x-show.transition.in.opacity.duration.600="activeTab === 2" src="https://flowbite.s3.amazonaws.com/blocks/marketing-ui/features/feature-office-long.png" alt="feature image">
+        <div class="relative *:mb-4 *:w-full *:lg:mb-0 *:rounded-lg">
+            <Image src={Benefit1} :class="{ 'active': activeTab === 0 }" x-show.transition.in.opacity.duration.600="activeTab === 0" alt="Image of desktop computer showing fast speed score on a speedometer"></Image>
+            <Image src={Benefit2} :class="{ 'active': activeTab === 1 }" x-show.transition.in.opacity.duration.600="activeTab === 1" alt="Image of construction business owner relaxing with peace of mind"></Image>
+            <Image src={Benefit3} :class="{ 'active': activeTab === 2 }" x-show.transition.in.opacity.duration.600="activeTab === 2" alt="Image of a small clock in the office of a construction business owner"></Image>
         </div>
         <!-- Right Side Ends -->
     </div>
