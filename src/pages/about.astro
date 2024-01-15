@@ -4,16 +4,28 @@ import Navigation from "../components/Navigation.astro";
 import HeroSection from "../layouts/HeroSection.astro";
 import AboutHero from "../layouts/AboutHero.astro";
 import Footer from "../layouts/Footer.astro";
+import TestimonialSection from "../layouts/TestimonialSection.astro";
+import AboutDetails from "../layouts/AboutDetails.astro";
 ---
 
 <MainLayout title="About Us | CodeNHammer" metaDescription="Discover the passion and expertise of CodeNHammer's sole visionary - revolutionizing web development for the construction industry. Dive into the story of our founder's journey, unwavering dedication, and unique approach to crafting bespoke websites that empower contractors throughout the U.S. Experience a personal touch in digital innovation.">
 
 	<Navigation></Navigation>
-	<HeroSection>
+	<!--<HeroSection>
 		<h1 class="mb-4 text-4xl font-sans font-bold tracking-tight leading-none text-zinc-200 md:text-5xl lg:text-6xl">Building Better Websites</h1>
 		<p class="mb-8 font-light text-zinc-400 text-md md:text-lg lg:text-xl sm:px-16">CodeNHammer is dedicated to providing high-quality websites for contractors, simplifying their online presence.</p>
-	</HeroSection>
+	</HeroSection>-->
 	<AboutHero></AboutHero>
+	<TestimonialSection></TestimonialSection>
+	<AboutDetails></AboutDetails>
+	<HeroSection>
+		<h1 class="mb-4 text-4xl font-sans font-bold tracking-tight leading-none text-zinc-200 md:text-5xl lg:text-6xl">Get a Winning Website</h1>
+        <p class="mb-2 font-light text-zinc-400 text-md md:text-lg lg:text-xl sm:px-16">If you're in the construction industry looking to hammer down your competition and code your way to success, look no further. Contact us at CodeNHammer, where your digital transformation begins.</p>
+		<p class="mb-8 font-light text-zinc-400 text-md md:text-lg lg:text-xl sm:px-16">Let's build a website that not only represents your brand but also drives your business forward. Get in touch today!</p>
+		<div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+			<a href="/#pricingSection" class="inline-flex items-center justify-center px-6 py-3 text-base text-center text-white rounded-md bg-[#007BFF] hover:bg-[#0070E8]">View pricing</a>  
+		</div>
+	</HeroSection>
 		
 	<Footer></Footer>
 	
