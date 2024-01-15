@@ -6,5 +6,13 @@ import alpinejs from "@astrojs/alpinejs";
 
 // https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), partytown(), alpinejs()]
+  integrations: [tailwind(), 
+    
+    partytown({
+    config: {
+      forward: ['dataLayer.push'],
+    },
+  }), 
+  
+  alpinejs()]
 });
