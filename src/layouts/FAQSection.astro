@@ -1,0 +1,92 @@
+---
+import Tagline from "../components/Tagline.astro";
+import Subheading from "../components/Subheading.astro";
+import H3 from "../components/H3.astro";
+import Paragraph from "../components/Paragraph.astro";
+---
+
+<section class="bg-zinc-950">
+    <div class="py-20 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-6 ">
+
+        <div class="text-center">
+            <Tagline>FAQs</Tagline>
+            <Subheading>Your Questions Answered</Subheading>
+        </div>
+        
+        <div class="mx-auto max-w-screen-md">
+
+            <!-- Accordion Container Start -->
+            <div x-data="{selected:null}" >
+                
+                <!-- Tab 1 -->
+                <div class="border-b border-gray-700">
+                    <button type="button" @click="selected !== 1 ? selected = 1 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span>What does "Unlimited Content Editing" mean?</span>
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400 font-light">You can add an unlimited number of content editing requests to your queue. Requests are worked on one at a time, every single business day. Revisions are unlimited as well.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 2 -->
+                <div class="border-b border-gray-700">
+                    <button type="button" @click="selected !== 2 ? selected = 2 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span>Who will I be working with?</span>
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400 font-light">You might be surprised to hear this, but CodeNHammer is actually an agency of one. This means you'll work directly with me, founder of CodeNHammer.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 3 -->
+                <div class="border-b border-gray-700">
+                    <button type="button" @click="selected !== 3 ? selected = 3 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span>Is there a limit to how many requests I can have?</span>
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400 font-light">Once subscribed, you're able to add as many requests to your queue as you'd like, and they will be delivered one by one.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 4 -->
+                <div class="border-b border-gray-700">
+                    <button type="button" @click="selected !== 4 ? selected = 4 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span>What if I don't like the website design?</span>
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400 font-light">No worries! We'll continue to revise the website design until you're 100% satisfied. Design revisions end when the website is published live online.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tab 5 -->
+                <div class="border-b border-gray-700 ">
+                    <button type="button" @click="selected !== 5 ? selected = 5 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                        <span>Are there any refunds if I don't like the service?</span>
+                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400 font-light">Due to the high quality nature of the work, there will be no refunds issued.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- Accordion Container Ends -->
+            
+        </div>
+
+    </div>
+</section>
