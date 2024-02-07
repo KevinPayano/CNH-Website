@@ -20,9 +20,9 @@ import Paragraph from "../components/Paragraph.astro";
                 
                 <!-- Tab 1 -->
                 <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 1 ? selected = 1 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span>What does "Unlimited Content Editing" mean?</span>
-                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <button type="button" @click="selected !== 1 ? selected = 1 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span class="group-focus:text-zinc-200">What does "Unlimited Content Editing" mean?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300 group-focus:rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                     <div x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
                         <div class="py-3">
@@ -33,9 +33,9 @@ import Paragraph from "../components/Paragraph.astro";
 
                 <!-- Tab 2 -->
                 <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 2 ? selected = 2 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span>Who will I be working with?</span>
-                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <button type="button" @click="selected !== 2 ? selected = 2 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span class="group-focus:text-zinc-200">Who will I be working with?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300 group-focus:rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                     <div x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
                         <div class="py-3">
@@ -46,9 +46,9 @@ import Paragraph from "../components/Paragraph.astro";
 
                 <!-- Tab 3 -->
                 <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 3 ? selected = 3 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span>Is there a limit to how many requests I can have?</span>
-                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <button type="button" @click="selected !== 3 ? selected = 3 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span class="group-focus:text-zinc-200">Is there a limit to how many requests I can have?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300 group-focus:rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                     <div x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
                         <div class="py-3">
@@ -59,9 +59,9 @@ import Paragraph from "../components/Paragraph.astro";
 
                 <!-- Tab 4 -->
                 <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 4 ? selected = 4 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span>What if I don't like the website design?</span>
-                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <button type="button" @click="selected !== 4 ? selected = 4 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
+                        <span class="group-focus:text-zinc-200">What if I don't like the website design?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300 group-focus:rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                     <div x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
                         <div class="py-3">
@@ -72,9 +72,9 @@ import Paragraph from "../components/Paragraph.astro";
 
                 <!-- Tab 5 -->
                 <div class="border-b border-gray-700 ">
-                    <button type="button" @click="selected !== 5 ? selected = 5 : selected = null" class="flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                        <span>Are there any refunds if I don't like the service?</span>
-                        <svg class="w-6 h-6 shrink-0" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    <button type="button" @click="selected !== 5 ? selected = 5 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
+                        <span class="group-focus:text-zinc-200">Are there any refunds if I don't like the service?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300 group-focus:rotate-180" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
                     </button>
                     <div x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
                         <div class="py-3">
