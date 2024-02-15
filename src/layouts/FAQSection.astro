@@ -81,6 +81,23 @@ import Subheading from "../components/Subheading.astro";
                     </div>
                 </div>
 
+                <!-- Tab 6 -->
+                <div id="tab5" class="border-b border-gray-700 ">
+                    <button type="button" @click="selected !== 6 ? selected = 6 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-6" aria-expanded="false" aria-controls="accordion-flush-body-6">
+                        <span class="group-hover:text-zinc-200">What happens to my website if I decide to cancel my subscription?</span>
+                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 6}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                    </button>
+                    <div x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
+                        <div class="py-3">
+                            <p class="mb-2 text-gray-400">We understand that flexibility is key for our clients, which is why our subscriptions come with no long-term contracts, allowing you to cancel at any-time. If you decide to cancel your subscription, here's what happens:</long-term></p>
+                            <ul class="pl-5 list-disc text-gray-400 space-y-3">
+                                <li><span class="font-medium italic text-zinc-200">Domain Name:</span> You retain full ownership of your domain name. This means you're free to transfer it or use it with another service as you see fit.</li>
+                                <li><span class="font-medium italic text-zinc-200">Website Content and Design:</span> The custom website we build for you is part of a managed service that operates under our subscription model. This means that the website itself, including the design, content, and functionality, remains a part of our portfolio. If you cancel, the website will be deactivated, but you're always welcome to re-subscribe in the future should your needs change.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
             </div>
             <!-- Accordion Container Ends -->
             
