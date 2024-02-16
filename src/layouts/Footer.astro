@@ -2,11 +2,10 @@
 
 ---
 
-<footer class="p-4 md:p-8 lg:p-10">
-    <div class="mx-auto max-w-screen-xl text-center space-y-2">
-
-        <div class="flex justify-center items-center">
-            <a href="/" class="">
+<footer class="p-4 py-8 md:p-8 lg:p-10">
+    <div class="mx-auto max-w-screen-xl text-center">
+        <div class="sm:items-center sm:justify-between sm:flex">
+            <a href="/" class="flex items-center justify-center mb-4 lg:mb-0">
                 <span class="sr-only">CodeNHammer Logo Home Button</span>
                 <svg width="175" height="18" viewBox="0 0 175 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M15.9128 11.9039C15.2168 15.4799 12.7448 17.9039 8.71278 17.9039C3.72078 17.9039 0.696777 14.0159 0.696777 9.02395C0.696777 4.00795 3.72078 0.0959473 8.71278 0.0959473C12.5288 0.0959473 15.0248 2.37595 15.8168 5.78395L12.6728 5.95195C12.1928 4.03195 10.8248 2.75995 8.68878 2.75995C5.30478 2.75995 3.81678 5.56795 3.81678 9.02395C3.81678 12.4559 5.32878 15.2399 8.68878 15.2399C10.9208 15.2399 12.3128 13.7999 12.7448 11.7359L15.9128 11.9039Z" fill="#E0FFFF"/>
@@ -22,27 +21,32 @@
                     <path d="M167.777 4.79995H170.561L170.633 7.24795C171.065 5.59195 172.025 4.79995 173.657 4.79995H174.857V7.12795H173.657C171.617 7.12795 170.753 8.15995 170.753 10.2239V17.5199H167.777V4.79995Z" fill="#E0FFFF"/>
                 </svg>     
             </a>
+            <ul class="flex flex-wrap justify-center items-center mb-4 text-sm text-zinc-200 lg:mb-0 ">
+                <li>
+                    <a href="/#featuresSection" class="mr-4 hover:underline md:mr-6">Services</a>
+                </li>
+                <li>
+                    <a href="/about" class="mr-4 hover:underline md:mr-6">About</a>
+                </li>
+                <li>
+                    <a href="/#portfolioSection" class="mr-4 hover:underline md:mr-6">Portfolio</a>
+                </li>
+                <li>
+                    <a href="/#pricingSection" class="mr-4 hover:underline md:mr-6">Pricing</a>
+                </li>
+                <li>
+                    <a href="/contact" class="hover:underline">Contact Us</a>
+                </li>
+            </ul>
+            
         </div>
-        
-        <ul class="flex flex-wrap justify-center items-center mb-6 text-zinc-200 border-b border-zinc-800 p-8">
-            <li>
-                <a href="/#featuresSection" class="mr-4 hover:underline md:mr-6">Services</a>
-            </li>
-            <li>
-                <a href="/about" class="mr-4 hover:underline md:mr-6">About</a>
-            </li>
-            <li>
-                <a href="/#portfolioSection" class="mr-4 hover:underline md:mr-6">Portfolio</a>
-            </li>
-            <li>
-                <a href="/#pricingSection" class="mr-4 hover:underline md:mr-6">Pricing</a>
-            </li>
-            <li>
-                <a href="/contact" class="mr-4 hover:underline md:mr-6">Contact Us</a>
-            </li>
-        </ul>
-    
-        <div class="text-sm text-center text-gray-400 p-4">© 2024 <a href="/" class="hover:underline">CodeNHammer, LLC</a>. All Rights Reserved.</div>
+        <hr class="my-6 sm:mx-auto border-gray-700 lg:my-8">
+        <div class="sm:items-center sm:justify-between sm:flex">
+            <span class="text-sm text-center text-gray-400 p-4">© 2024 <a href="/" class="hover:underline">CodeNHammer, LLC</a>. All Rights Reserved.</span>
+            <div class="flex justify-center mt-4 space-x-6 sm:mt-0">
+                <a href="#" class="text-sm text-gray-400 hover:underline">Terms of Service</a>
+                <a href="#" class="text-sm text-gray-400 hover:underline">Privacy Policy</a>
+            </div> 
+        </div>
     </div>
-
 </footer>
