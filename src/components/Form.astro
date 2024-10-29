@@ -1,0 +1,64 @@
+---
+//Components
+import Input from "./Input.astro";
+import Textarea from "./Textarea.astro";
+
+---
+
+<form 
+    x-data="{
+        loading: false,
+        success: false,
+        submitForm(event) {
+            this.loading = true;
+            this.success = false;
+            // Simulate form submission delay
+            setTimeout(() => {
+                this.loading = false;
+                this.success = true;
+            }, 2000);
+        }
+    }" 
+    @submit.prevent="submitForm"
+    name="contact" 
+    method="POST"
+    data-netlify="true" 
+    class="py-6 space-y-4 mx-auto max-w-screen-md">
+
+    <div x-show="!success" class="space-y-4">
+
+        <div>
+            <label for="name" class="mb-2 text-sm font-medium text-neutral-900">Your Name</label>
+            <Input type="name" placeholder="John Doe"></Input>
+        </div>
+        <div>
+            <label for="email" class="mb-2 text-sm font-medium text-neutral-900">Email</label>
+            <Input type="email" placeholder="name@codenhammer.com"></Input>
+        </div>
+        <div>
+            <label for="subject" class="mb-2 text-sm font-medium text-neutral-900">Subject</label>
+            <Input type="subject" placeholder="How can we help you?"></Input>
+        </div>
+        <div>
+            <label for="message" class="mb-2 text-sm font-medium text-neutral-900">Your message</label>
+            <Textarea placeholder="Your message"></Textarea>
+        </div>
+
+        <button type="submit" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide text-neutral-50 transition-colors duration-200 rounded-md bg-[#007BFF] hover:bg-[#005EC3]">
+            <template x-if="!loading">
+                <span>Send</span>
+            </template>
+
+            <template x-if="loading">
+                <svg class="size-5 text-white" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g><circle cx="12" cy="2.5" r="1.5" fill="currentColor" opacity=".14"/><circle cx="16.75" cy="3.77" r="1.5" fill="currentColor" opacity=".29"/><circle cx="20.23" cy="7.25" r="1.5" fill="currentColor" opacity=".43"/><circle cx="21.5" cy="12" r="1.5" fill="currentColor" opacity=".57"/><circle cx="20.23" cy="16.75" r="1.5" fill="currentColor" opacity=".71"/><circle cx="16.75" cy="20.23" r="1.5" fill="currentColor" opacity=".86"/><circle cx="12" cy="21.5" r="1.5" fill="currentColor"/><animateTransform attributeName="transform" calcMode="discrete" dur="0.75s" repeatCount="indefinite" type="rotate" values="0 12 12;30 12 12;60 12 12;90 12 12;120 12 12;150 12 12;180 12 12;210 12 12;240 12 12;270 12 12;300 12 12;330 12 12;360 12 12"/></g></svg>
+            </template>
+        </button>
+
+    </div>
+
+    <div x-show="success" class="text-center" x-transition>
+        <svg class="size-12 mx-auto text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+        <p class="mt-2 text-lg font-medium text-green-500">Form Successfully Submitted!</p>
+    </div>
+    
+</form>

@@ -1,38 +1,27 @@
 ---
-import { Image } from "astro:assets";
-import WebDemo from "../assets/VideoDemo.png";
-
-import MainLayout from "../layouts/MainLayout.astro";
+//Components
 import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+//Layouts
+import MainLayout from "../layouts/MainLayout.astro";
 import HeroSection from "../layouts/HeroSection.astro";
-import FeaturesSection from "../layouts/FeaturesSection.astro"
+import FeaturesSection from "../layouts/FeaturesSection.astro";
 import BenefitsSection from "../layouts/BenefitsSection.astro";
-import HowWeSection from "../layouts/HowWeSection.astro";
-import TestimonialSection from "../layouts/TestimonialSection.astro";
-import ProjectSection from "../layouts/ProjectSection.astro";
 import PricingSection from "../layouts/PricingSection.astro";
 import FAQSection from "../layouts/FAQSection.astro";
-import Footer from "../layouts/Footer.astro";
+import CTASection from "../layouts/CTASection.astro";
+
 ---
 
-<MainLayout title="Home | CodeNHammer" metaDescription="Discover unparalleled digital solutions at CodeNHammer, where we specialize in crafting lightning-fast, cutting-edge websites for construction contractors across the U.S. Elevate your online presence with our expertly designed platforms, tailored to showcase your services and drive business growth. Visit us now to transform your digital footprint!">
+<MainLayout title="Top UI Components and Layouts for Small Businesses & Contractors | CodeNHammer" description="Explore CodeNHammer’s specialized UI components and layouts tailored for small businesses and contractors. Build fast, customizable websites with our ready-to-use components.">
+    <Navigation></Navigation>
+    <HeroSection></HeroSection>
+    <FeaturesSection></FeaturesSection>
+    <BenefitsSection></BenefitsSection>
+    <PricingSection></PricingSection>
+    <FAQSection></FAQSection>
+    <CTASection></CTASection>
+    <Footer></Footer>
 
-	<Navigation></Navigation>
-	<HeroSection>
-		<h1 class="mb-4 text-4xl font-sans font-bold tracking-tight leading-none text-zinc-200 md:text-5xl lg:text-6xl">Web design for contractors. <br>We build with quality in mind.</h1>
-        <p class="mb-8 text-zinc-400 text-md md:text-lg lg:text-xl sm:px-16">We specialize in lead generation for contractors, construction and trade with powerful websites built using custom industry technologies. CodeNHammer is a web designer for contractors and trades, where you get the online storefront you need to get all the business you can handle.</p>
-		<div class="flex flex-col mb-8 lg:mb-16 space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
-			<a href="/#featuresSection" class="inline-flex items-center justify-center px-6 py-3 text-base text-center text-white rounded-md bg-[#007BFF] hover:bg-[#0070E8]">Browse Services</a>  
-		</div>
-		<!-- <Image src={WebDemo} class="hidden mx-auto mb-5 lg:mb-8 lg:block" alt="Video demo of websites built by CodeNHammer"></Image> -->
-	</HeroSection>
-	<FeaturesSection></FeaturesSection>
-	<BenefitsSection></BenefitsSection>
-	<HowWeSection></HowWeSection>
-	<TestimonialSection></TestimonialSection>
-	<ProjectSection></ProjectSection>
-	<PricingSection></PricingSection>
-	<FAQSection></FAQSection>
-	<Footer></Footer>
-	
 </MainLayout>

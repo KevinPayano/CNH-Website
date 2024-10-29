@@ -1,0 +1,211 @@
+---
+const currentPath = Astro.url.pathname;
+
+function isActive(href) {
+    return currentPath === href || currentPath.startsWith(href + '/');
+}
+---
+
+<!-- Side Bar Start -->
+<div>
+
+    <aside class="fixed overflow-y-auto left-[max(0px,calc(50%-45rem))] right-auto inset-0 top-[3.8125rem] bg-white z-30 w-64 transition-transform -translate-x-full xl:translate-x-0" aria-label="Sidebar menu">
+    
+        <div class="py-5 px-3 border-r border-neurtral-200">
+            
+            <!-- Getting Started Container Start -->
+            <ul class="space-y-2">
+    
+                <!-- List Header -->
+                <li class="p-2 font-medium">Getting Started</li>
+    
+                <li>
+                    <a href="/docs/intro" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/intro') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/intro') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Introduction</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/docs/how-to-use" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/how-to-use') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/how-to-use') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>How to Use</span>
+                    </a>
+                </li>
+                
+            </ul>
+            <!-- Getting Started Container End -->
+    
+            <!-- Components Container Start -->
+            <ul class="pt-5 mt-5 space-y-2 border-t border-neutral-200">
+                
+                <!-- List Header -->
+                <li class="p-2 font-medium">Components</li>
+    
+                <li>
+                    <a href="/docs/accordion" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/accordion') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/accordion') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Accordion</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/docs/buttons" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/buttons') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/buttons') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Buttons</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/carousel" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/carousel') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/carousel') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Carousel</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/docs/drawers" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/drawers') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/drawers') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Drawers</span>
+                    </a>
+                </li>
+    
+                    <a href="/docs/dropdown" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/dropdown') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/dropdown') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Dropdown</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/inputs" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/inputs') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/inputs') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Inputs</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/gallery" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/gallery') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/gallery') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Gallery</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/navigation" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/navigation') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/navigation') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Navigation</span>
+                    </a>
+                </li>
+    
+    
+            </ul>
+            <!-- Components Container End -->
+    
+            <!-- Layouts Container Start -->
+            <ul class="pt-5 mt-5 space-y-2 border-t border-neutral-200">
+                
+                <!-- List Header -->
+                <li class="p-2 font-medium">Layouts</li>
+    
+                <li>
+                    <a href="/docs/about-us" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/about-us') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/about-us') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>About Us</span>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/docs/contact-us" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/contact-us') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/contact-us') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Contact Us</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/cta" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/cta') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/cta') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>CTA</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/details" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/details') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/details') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Details</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/faqs" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/faqs') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/faqs') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>FAQs</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="/docs/footer" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/footer') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/footer') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Footers</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/gallery-section" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/gallery-section') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/gallery-section') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Gallery</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/header" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/header') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/header') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Header</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/hero" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/hero') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/hero') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Hero</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/logos" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/logos') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/logos') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Logos</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/services" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/services') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/services') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Services</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/stats" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/stats') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/stats') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Stats</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/steps" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/steps') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/steps') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Steps</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/team" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/team') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/team') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Team</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/testimonials" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/testimonials') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/testimonials') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Testimonials</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/values" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/values') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/values') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Values</span>
+                    </a>
+                </li>
+    
+                <li>
+                    <a href="/docs/why-us" class={`group flex items-center p-2 rounded-md transition duration-75 ${isActive('/docs/why-us') ? 'bg-blue-50 text-blue-600' : 'hover:bg-blue-50'}`}>
+                        <span class={`ml-3 text-sm ${isActive('/docs/why-us') ? 'text-blue-600' : 'text-neutral-900 group-hover:text-blue-600'}`}>Why Us</span>
+                    </a>
+                </li>
+    
+            </ul>
+            <!-- Layouts Container End -->
+    
+            
+        </div>
+        
+    </aside>
+
+</div>
+<!-- Side Bar End -->

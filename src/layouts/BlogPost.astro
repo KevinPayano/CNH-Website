@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import '../styles/typography.css';
+//Components
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+
+//Layouts
+import MainLayout from "./MainLayout.astro";
+
+const { frontmatter } = Astro.props;
+
+// Function to format the date
+function formatDate(date) {
+  const options = { month: 'long', day: 'numeric', year: 'numeric' };
+  return new Date(date).toLocaleDateString('en-US', options);
+}
+
+// Get the image URL from frontmatter, or use a default if not provided
+const backgroundImage = frontmatter.image?.url || 'https://flowbite.s3.amazonaws.com/blocks/marketing-ui/articles/background.png';
+---
+
+<MainLayout title={frontmatter.title} description={frontmatter.description}>
+    <Navigation></Navigation>
+    
+    <article>
+        <header class="w-full h-[460px] xl:h-[537px] bg-no-repeat bg-cover bg-center bg-blend-darken relative">
+            <Image 
+                src={backgroundImage}
+                alt={frontmatter.image?.alt || "Blog post header image"}
+                width={1920}
+                height={1080}
+                class="absolute inset-0 w-full h-full object-cover"
+                transition:name={`image-${frontmatter.slug}`}
+            />
+            <div class="absolute top-0 left-0 w-full h-full bg-black bg-opacity-50"></div>
+            <div class="absolute space-y-2 top-20 left-1/2 px-4 mx-auto w-full max-w-screen-xl -translate-x-1/2 xl:top-1/2 xl:-translate-y-1/2 xl:px-0">
+                <h1 class="max-w-4xl text-2xl font-extrabold leading-none text-white sm:text-3xl lg:text-4xl" transition:name={`title-${frontmatter.slug}`}>{frontmatter.title}</h1>
+                <p class="text-lg text-neutral-100" transition:name={`description-${frontmatter.slug}`}>{frontmatter.description}</p>
+                <p class="text-sm text-neutral-200">Published on: {formatDate(frontmatter.pubDate)}</p>
+            </div>
+        </header>
+        
+        <div class="prose relative z-20 justify-between p-6 -mt-36 mx-4 max-w-screen-xl bg-neutral-50 rounded xl:-mt-32 xl:p-9 xl:mx-auto">
+            <slot />
+        </div>
+    </article>
+
+    <Footer></Footer>
+</MainLayout>

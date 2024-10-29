@@ -1,0 +1,485 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Customizable Drawer UI Components for Hidden Navigation | CodeNHammer" description="Add hidden navigation and content panels with CodeNHammer’s customizable drawer UI components. Perfect for creating clean, uncluttered layouts on small business and contractor websites.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Drawers"
+        description="Create seamless slide-in panels with our Drawer component. Perfect for navigation, additional content, or hidden menus, providing a smooth user experience without cluttering your main layout.">
+
+        <Tabs subheading="Drawer Left">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4 min-h-48 flex items-center justify-center">
+
+                <div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+                    <!-- Trigger Button -->
+                    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+                    
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+                
+                            <!-- Dark Background Overlay -->
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+                
+                
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-y-0 left-0 flex max-w-full">
+                                        
+                                        <div 
+                                            x-show="slideOverOpen" 
+                                            @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:enter-start="-translate-x-full" 
+                                            x-transition:enter-end="translate-x-0" 
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:leave-start="translate-x-0" 
+                                            x-transition:leave-end="-translate-x-full" 
+                                            class="w-screen max-w-md">
+                                            
+                                            <!-- SlideOver Content Container Start -->
+                                            <div class="bg-white rounded-r-lg flex flex-col h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                                
+                                                <!-- Top SlideOver Start -->
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                
+                                                        <!-- Header -->
+                                                        <h2 class="text-base font-semibold leading-6 text-gray-900" id="slide-over-title">Drawer Title</h2>
+                                                        
+                                                        <!-- Close Button Container -->
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                                            </button>
+                                                        </div>
+                
+                                                    </div>
+                                                </div>
+                                                <!-- Top SlideOver Start -->
+                
+                                                <!-- Content Container Start -->
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-300">
+                                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Content Container End -->
+                
+                                            </div>
+                                            <!-- SlideOver Content Container End -->
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </template>
+                
+                </div>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 min-h-48" code={`<div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+    <!-- Trigger Button -->
+    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+    
+    <template x-teleport="body">
+        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+
+            <!-- Dark Background Overlay -->
+            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+
+
+            <div class="fixed inset-0 overflow-hidden">
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="fixed inset-y-0 left-0 flex max-w-full">
+                        
+                        <div 
+                            x-show="slideOverOpen" 
+                            @click.away="slideOverOpen = false"
+                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:enter-start="-translate-x-full" 
+                            x-transition:enter-end="translate-x-0" 
+                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:leave-start="translate-x-0" 
+                            x-transition:leave-end="-translate-x-full" 
+                            class="w-screen max-w-md">
+                            
+                            <!-- SlideOver Content Container Start -->
+                            <div class="bg-white rounded-r-lg flex flex-col h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                
+                                <!-- Top SlideOver Start -->
+                                <div class="px-4 sm:px-5">
+                                    <div class="flex items-start justify-between pb-1">
+
+                                        <!-- Header -->
+                                        <h2 class="text-base font-semibold leading-6 text-gray-900" id="slide-over-title">Drawer Title</h2>
+                                        
+                                        <!-- Close Button Container -->
+                                        <div class="flex items-center h-auto ml-3">
+                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Top SlideOver Start -->
+
+                                <!-- Content Container Start -->
+                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-300">
+                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Content Container End -->
+
+                            </div>
+                            <!-- SlideOver Content Container End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+</div>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Drawer Right">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4 min-h-48 flex items-center justify-center">
+
+                <div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+                    <!-- Trigger Button -->
+                    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+                    
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+                
+                            <!-- Dark Background Overlay -->
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+                
+                
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-y-0 right-0 flex max-w-full">
+                                        
+                                        <div 
+                                            x-show="slideOverOpen" 
+                                            @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:enter-start="translate-x-full" 
+                                            x-transition:enter-end="translate-x-0" 
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:leave-start="translate-x-0" 
+                                            x-transition:leave-end="translate-x-full" 
+                                            class="w-screen max-w-md">
+                                            
+                                            <!-- SlideOver Content Container Start -->
+                                            <div class="bg-white rounded-l-lg flex flex-col h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                                
+                                                <!-- Top SlideOver Start -->
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                
+                                                        <!-- Header -->
+                                                        <h2 class="text-base font-semibold leading-6 text-gray-900" id="slide-over-title">Drawer Title</h2>
+                                                        
+                                                        <!-- Close Button Container -->
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                                            </button>
+                                                        </div>
+                
+                                                    </div>
+                                                </div>
+                                                <!-- Top SlideOver Start -->
+                
+                                                <!-- Content Container Start -->
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-300">
+                                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Content Container End -->
+                
+                                            </div>
+                                            <!-- SlideOver Content Container End -->
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </template>
+                
+                </div>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 min-h-48" code={`<div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+    <!-- Trigger Button -->
+    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+    
+    <template x-teleport="body">
+        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+
+            <!-- Dark Background Overlay -->
+            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+
+
+            <div class="fixed inset-0 overflow-hidden">
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="fixed inset-y-0 right-0 flex max-w-full">
+                        
+                        <div 
+                            x-show="slideOverOpen" 
+                            @click.away="slideOverOpen = false"
+                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:enter-start="translate-x-full" 
+                            x-transition:enter-end="translate-x-0" 
+                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:leave-start="translate-x-0" 
+                            x-transition:leave-end="translate-x-full" 
+                            class="w-screen max-w-md">
+                            
+                            <!-- SlideOver Content Container Start -->
+                            <div class="bg-white rounded-l-lg flex flex-col h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                
+                                <!-- Top SlideOver Start -->
+                                <div class="px-4 sm:px-5">
+                                    <div class="flex items-start justify-between pb-1">
+
+                                        <!-- Header -->
+                                        <h2 class="text-base font-semibold leading-6 text-gray-900" id="slide-over-title">Drawer Title</h2>
+                                        
+                                        <!-- Close Button Container -->
+                                        <div class="flex items-center h-auto ml-3">
+                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Top SlideOver Start -->
+
+                                <!-- Content Container Start -->
+                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-300">
+                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Content Container End -->
+
+                            </div>
+                            <!-- SlideOver Content Container End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+</div>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Drawer Bottom">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4 min-h-48 flex items-center justify-center">
+
+                <div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+                    <!-- Trigger Button -->
+                    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+                    
+                    <template x-teleport="body">
+                        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+                
+                            <!-- Dark Background Overlay -->
+                            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+                
+                
+                            <div class="fixed inset-0 overflow-hidden">
+                                <div class="absolute inset-0 overflow-hidden">
+                                    <div class="fixed inset-x-0 bottom-0 flex max-w-full h-3/4 xl:h-3/5">
+                                        
+                                        <div 
+                                            x-show="slideOverOpen" 
+                                            @click.away="slideOverOpen = false"
+                                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:enter-start="translate-y-full" 
+                                            x-transition:enter-end="translate-y-0" 
+                                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                                            x-transition:leave-start="translate-y-0" 
+                                            x-transition:leave-end="translate-y-full" 
+                                            class="w-screen">
+                                            
+                                            <!-- SlideOver Content Container Start -->
+                                            <div class="bg-white rounded-t-lg flex flex-col w-full h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                                
+                                                <!-- Top SlideOver Start -->
+                                                <div class="px-4 sm:px-5">
+                                                    <div class="flex items-start justify-between pb-1">
+                
+                                                        <!-- Header -->
+                                                        <h2 class="text-base font-semibold leading-6 text-neutral-900" id="slide-over-title">Drawer Title</h2>
+                                                        
+                                                        <!-- Close Button Container -->
+                                                        <div class="flex items-center h-auto ml-3">
+                                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                                            </button>
+                                                        </div>
+                
+                                                    </div>
+                                                </div>
+                                                <!-- Top SlideOver Start -->
+                
+                                                <!-- Content Container Start -->
+                                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-200">
+                                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- Content Container End -->
+                
+                                            </div>
+                                            <!-- SlideOver Content Container End -->
+                
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                
+                        </div>
+                    </template>
+                
+                </div>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 min-h-48" code={`<div x-data="{ slideOverOpen: false }" class="relative z-10 w-auto h-auto">
+
+    <!-- Trigger Button -->
+    <button @click="slideOverOpen=true" class="cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-950 text-neutral-50 rounded-md bg-neutral-950 hover:bg-neutral-900">Open Drawer</button>
+    
+    <template x-teleport="body">
+        <div x-show="slideOverOpen" @keydown.window.escape="slideOverOpen=false" class="relative z-[99]">
+
+            <!-- Dark Background Overlay -->
+            <div x-show="slideOverOpen" x-transition.opacity.duration.600ms @click="slideOverOpen = false" class="fixed backdrop-blur-sm inset-0 bg-black bg-opacity-25"></div>
+
+
+            <div class="fixed inset-0 overflow-hidden">
+                <div class="absolute inset-0 overflow-hidden">
+                    <div class="fixed inset-x-0 bottom-0 flex max-w-full h-3/4 xl:h-3/5">
+                        
+                        <div 
+                            x-show="slideOverOpen" 
+                            @click.away="slideOverOpen = false"
+                            x-transition:enter="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:enter-start="translate-y-full" 
+                            x-transition:enter-end="translate-y-0" 
+                            x-transition:leave="transform transition ease-in-out duration-500 sm:duration-700" 
+                            x-transition:leave-start="translate-y-0" 
+                            x-transition:leave-end="translate-y-full" 
+                            class="w-screen">
+                            
+                            <!-- SlideOver Content Container Start -->
+                            <div class="bg-white rounded-t-lg flex flex-col w-full h-full py-5 border-l shadow-lg border-neutral-100/70">
+                                
+                                <!-- Top SlideOver Start -->
+                                <div class="px-4 sm:px-5">
+                                    <div class="flex items-start justify-between pb-1">
+
+                                        <!-- Header -->
+                                        <h2 class="text-base font-semibold leading-6 text-neutral-900" id="slide-over-title">Drawer Title</h2>
+                                        
+                                        <!-- Close Button Container -->
+                                        <div class="flex items-center h-auto ml-3">
+                                            <button @click="slideOverOpen=false" class="absolute top-0 right-0 z-30 flex items-center justify-center p-2 mt-4 mr-5 space-x-1 text-xs font-medium uppercase border rounded-full border-neutral-300 text-neutral-600 hover:bg-neutral-100">
+                                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-4"><path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path></svg>
+                                            </button>
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <!-- Top SlideOver Start -->
+
+                                <!-- Content Container Start -->
+                                <div class="relative flex-1 px-4 mt-5 sm:px-5">
+                                    <div class="absolute inset-0 px-4 sm:px-5">
+                                        <div class="relative h-full overflow-y-scroll flex items-center justify-center border rounded-md border-neutral-200">
+                                            <h4 class="text-2xl tracking-tight font-medium text-neutral-300">Content Here</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Content Container End -->
+
+                            </div>
+                            <!-- SlideOver Content Container End -->
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </template>
+
+</div>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

@@ -1,0 +1,74 @@
+---
+
+---
+
+<!-- Accordion Container Start -->
+<div x-data="{ activeAccordion: '', setActiveAccordion(id) { this.activeAccordion = (this.activeAccordion == id) ? '' : id } }" class="relative w-full mx-auto divide-y divide-gray-200">
+    
+    <!-- Accordion 1 -->
+    <div x-data="{ id: $id('accordion') }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none">
+            <span>What is CodeNHammer?</span>
+            <svg class="size-4 duration-200 ease-out text-blue-600 shrink-0" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="p-4 pt-0 opacity-70">
+                CodeNHammer (CNH) is a UI component library designed specifically for freelance web designers building websites for small businesses and contractors. It offers customizable, pre-made components and layouts using Tailwind CSS and Alpine.js to streamline the web design process.
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion 2 -->
+    <div x-data="{ id: $id('accordion') }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none">
+            <span>How do I install CodeNHammer?</span>
+            <svg class="size-4 duration-200 ease-out text-blue-600 shrink-0" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="p-4 pt-0 opacity-70">
+                Add AlpineJS and TailwindCSS to your page and then copy and paste any of these elements into your project. Follow the step-by-step instructions provided on the platform <a href="/docs/how-to-use" class="text-blue-600 underline">here</a>.
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion 3 -->
+    <div x-data="{ id: $id('accordion') }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none">
+            <span>How often is CodeNHammer updated?</span>
+            <svg class="size-4 duration-200 ease-out text-blue-600 shrink-0" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="p-4 pt-0 opacity-70">
+                CodeNHammer is dedicated to regularly updating its platform with new features, performance improvements, and compatibility with the latest technologies to ensure freelance web designers can easily upgrade their projects.
+            </div>
+        </div>
+    </div>
+
+    <!-- Accordion 4 -->
+    <div x-data="{ id: $id('accordion') }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none">
+            <span>Can I get a refund?</span>
+            <svg class="size-4 duration-200 ease-out text-blue-600 shrink-0" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="p-4 pt-0 opacity-70">
+                Due to the exceptional quality of our work, refunds are not available.
+            </div>
+        </div>
+    </div>
+
+     <!-- Accordion 5 -->
+     <div x-data="{ id: $id('accordion') }" :class="{ 'text-neutral-900': activeAccordion==id, 'text-neutral-600 hover:text-neutral-900': activeAccordion!=id }" class="cursor-pointer group">
+        <button @click="setActiveAccordion(id)" class="flex items-center justify-between w-full p-4 text-left select-none">
+            <span>Still have a question?</span>
+            <svg class="size-4 duration-200 ease-out text-blue-600 shrink-0" :class="{ 'rotate-180': activeAccordion==id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <div x-show="activeAccordion==id" x-collapse x-cloak>
+            <div class="p-4 pt-0 opacity-70">
+                Please email us here <a href="#" class="text-blue-600 underline">hello@codenhammer.com</a>. We'll be happy to answer your questions!
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- Accordion Container End -->

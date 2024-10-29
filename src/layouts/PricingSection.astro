@@ -1,78 +1,73 @@
 ---
-import Tagline from "../components/Tagline.astro";
-import Subheading from "../components/Subheading.astro";
-import Paragraph from "../components/Paragraph.astro";
+//Components
+import PrimaryBtn1 from "../components/PrimaryBtn-1.astro";
 ---
 
-<section id="pricingSection">
-    <div class="py-20 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-12">
-       
-        <Tagline>Pricing</Tagline>
-        <Subheading>Get a Winning Website</Subheading>
+<section id="pricingSection"class="bg-white">
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-6">
 
-         <!-- Pricing Card -->
-        <div class="grid grid-cols-1 border-2 border-[#007BFF] rounded-lg shadow md:grid-cols-2 lg:grid-cols-3">
+        <!-- Tagline & Header Container -->
+        <div class="max-w-screen-md space-y-2 mb-8">
+            <span class="text-sm font-medium text-blue-500">Pricing</span>
+            <h2 class="text-neutral-900 text-4xl font-bold">Launch Offer: Get CodeNHammer at an Exclusive Price!</h2>
+        </div>
 
-            <!-- Left Container Start -->
-            <div class="col-span-1 p-3 m-3 lg:col-span-2">
-                <h2 class="mb-1 text-2xl font-semibold text-zinc-200">Business Package</h2>
-                <Paragraph>One request at a time. Cancel anytime.</Paragraph>
-
-                <div class="grid gap-4 mt-4 sm:grid-cols-2 md:grid-cols-1 lg:mt-6 lg:grid-cols-2">
-
-                    <!-- Left List -->
-                    <ul role="list" class="space-y-4 ">
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">5 page site (Home, Services, About, Portfolio, and Contacts page)</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">Up to 10 Services pages</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">Unlimited Content Editing</span>
-                        </li>
-                    </ul>
-
-                    <!-- Right List -->
+        <!-- Pricing Card -->
+        <div class="bg-white rounded-md border border-blue-600 lg:grid lg:grid-cols-3">
+            <div class="col-span-2 p-6 lg:p-8">
+                <h3 class="mb-1 text-2xl font-semibold text-gray-900">Designed to save you time and elevate your work.</h3>
+                
+                <div class="grid gap-4 mt-4 lg:mt-6 sm:grid-cols-2 md:grid-cols-3">
+                    
+                    <!-- List -->
                     <ul role="list" class="space-y-4">
                         <li class="flex space-x-2.5">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">Hosting Management</span>
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">40+ Layouts</span>
                         </li>
                         <li class="flex space-x-2.5">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">Performance Optimization</span>
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">30+ Components</span>
                         </li>
                         <li class="flex space-x-2.5">
                             <!-- Icon -->
-                            <svg class="flex-shrink-0 w-5 h-5 text-green-400" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="m9 12l2 2l4-4"/></g></svg>
-                            <span class="leading-tight text-gray-400">On-page SEO</span>
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">Google Analytics Built-in</span>
+                        </li>
+                    </ul>
+
+                    <!-- List -->
+                    <ul role="list" class="space-y-4">
+                        <li class="flex space-x-2.5">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">Netlify Forms Built-in</span>
+                        </li>
+                        <li class="flex space-x-2.5">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">CNH Figma Design File</span>
+                        </li>
+                        <li class="flex space-x-2.5">
+                            <!-- Icon -->
+                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                            <span class="leading-tight text-neutral-500">1 Developer License</span>
                         </li>
                     </ul>
 
                 </div>
-                <!-- List Container Ends -->
 
             </div>
-            <!-- Left Container Ends -->
 
-            <!-- Right Container Starts -->
-            <div class="p-3 m-3 text-center md:border-l md:border-zinc-800 md:grid md:text-right">
-                <div class="self-center">
-                    <h2 class="text-4xl font-semibold text-zinc-200 lg:text-5xl">$300/mo</h2>
-                    <p class="mt-1 text-sm mb-4 text-gray-400">By subscribing you acknowledge and agree to our <a href="#" class="underline hover:text-zinc-200">Terms of Service</a>.</p>
-                    <a href="/contact" class="flex justify-center text-white bg-[#007BFF] hover:bg-[#0070E8] font-medium rounded-lg text-sm px-5 py-2.5 text-center">Get started today</a>   
+            <div class="flex p-6 text-center rounded-r-md bg-blue-50 lg:p-8">
+                <div class="self-center w-full">
+                    <div class="text-5xl font-semibold text-neutral-900">$49</div>
+                    <div class="mt-1 mb-4 text-neutral-500 text-light">Lifetime access</div>
+                    <PrimaryBtn1 href={"#"}>Get CNH Now</PrimaryBtn1>
                 </div>
             </div>
-            <!-- Right Container Ends -->
 
         </div>
     </div>

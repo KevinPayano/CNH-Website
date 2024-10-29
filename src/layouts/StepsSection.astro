@@ -1,0 +1,174 @@
+---
+
+---
+
+<section>
+    <div x-data="{ activeTab: 0, activeAccordion: 'accordion-0', setActiveAccordion(id) { if (this.activeAccordion !== id) { this.activeAccordion = id; } } }" class="gap-8 items-center py-20 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-12 lg:py-28">
+        
+        <!-- Left Side Container Starts -->
+        <div class="">
+
+            <!-- Tagline & Header Container -->
+            <div class="max-w-screen-md space-y-2 mb-8">
+                <span class="text-sm font-medium text-blue-500">Unlock Your Potential</span>
+                <h2 class="text-neutral-900 text-4xl font-bold">Why Choose CodeNHammer</h2>
+            </div>
+
+            <!-- Tabs Container Starts -->
+            <div class=" mb-6 space-y-4 lg:space-y-8 *:cursor-pointer">
+                
+                <!-- Tab 1 -->
+                <div x-data="{ id: 'accordion-0' }" class="flex p-6 border rounded-lg border-blue-600 bg-white hover:bg-blue-50" :class="{'bg-blue-50': activeTab === 0 }" @click="activeTab = 0; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Excellent Google Lighthouse Scores</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Boost your Google ranking with our optimized boilerplate. Fast loading on all devices enhances user experience and SEO, increasing online visibility.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-blue-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+                <!-- Tab 2 -->
+                <div x-data="{ id: 'accordion-1' }" class="flex p-6 border rounded-lg border-blue-600 bg-white hover:bg-blue-50" :class="{'bg-blue-50': activeTab === 1 }" @click="activeTab = 1; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Save Time</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Streamline your workflow with our pre-built sections and components. Save time on repetitive tasks and focus on unique client designs.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-blue-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+                <!-- Tab 3 -->
+                <div x-data="{ id: 'accordion-2' }" class="flex p-6 border rounded-lg border-blue-600 bg-white hover:bg-blue-50" :class="{'bg-blue-50': activeTab === 2 }" @click="activeTab = 2; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0 text-green-600">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Build Fast</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Deliver high-quality websites quickly. Our boilerplate ensures rapid site building, exceeding client expectations and boosting productivity.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-blue-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Tabs Container Ends -->
+
+        </div>
+        <!-- Left Side Container Ends -->
+
+        <!-- Right Side Container Starts -->
+        <div class="relative flex justify-center *:mb-4 *:lg:mb-0 *:rounded-md">
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 0 }" x-show.transition.in.opacity.duration.600="activeTab === 0">
+                <svg width="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M59.72 44.4302V60.3902C59.72 61.2502 59.03 61.9602 58.16 61.9602H10.07C9.21 61.9602 8.5 61.2602 8.5 60.3902V26.2302C8.5 25.3702 9.2 24.6602 10.07 24.6602H46.06" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M45.15 30.8501H8.5" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.9003 28.0799C13.0826 28.0799 13.2303 27.9322 13.2303 27.7499C13.2303 27.5677 13.0826 27.4199 12.9003 27.4199C12.7181 27.4199 12.5703 27.5677 12.5703 27.7499C12.5703 27.9322 12.7181 28.0799 12.9003 28.0799Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15.5995 28.0799C15.7818 28.0799 15.9295 27.9322 15.9295 27.7499C15.9295 27.5677 15.7818 27.4199 15.5995 27.4199C15.4173 27.4199 15.2695 27.5677 15.2695 27.7499C15.2695 27.9322 15.4173 28.0799 15.5995 28.0799Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M18.3105 28.0799C18.4927 28.0799 18.6405 27.9322 18.6405 27.7499C18.6405 27.5677 18.4927 27.4199 18.3105 27.4199C18.1282 27.4199 17.9805 27.5677 17.9805 27.7499C17.9805 27.9322 18.1282 28.0799 18.3105 28.0799Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.2306 47.8501C25.8406 43.9501 29.9306 41.3101 34.1106 41.4901C34.2306 41.4901 34.2406 41.6901 34.1106 41.6901C30.1406 41.7801 26.4206 44.4801 25.1606 48.2101C24.9306 48.8501 23.9606 48.4701 24.2306 47.8501Z" fill="#007BFF"/>
+                    <path d="M21.7402 51.6801C21.7402 44.8501 27.2802 39.3101 34.1102 39.3101C40.9402 39.3101 46.4802 44.8501 46.4802 51.6801" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M34.3298 51.7601C34.7826 51.7601 35.1498 51.393 35.1498 50.9401C35.1498 50.4872 34.7826 50.1201 34.3298 50.1201C33.8769 50.1201 33.5098 50.4872 33.5098 50.9401C33.5098 51.393 33.8769 51.7601 34.3298 51.7601Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.9799 50.5902L41.2199 43.9502C41.2899 43.8802 41.3999 43.9902 41.3299 44.0602L34.6898 51.3002C34.2298 51.8002 33.4799 51.0602 33.9799 50.5902Z" fill="#007BFF"/>
+                    <path d="M59.73 41.58C66.2304 41.58 71.5 36.3104 71.5 29.81C71.5 23.3096 66.2304 18.04 59.73 18.04C53.2296 18.04 47.96 23.3096 47.96 29.81C47.96 36.3104 53.2296 41.58 59.73 41.58Z" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M51.8096 27.4302L53.7196 26.4502V33.1802" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M52.1299 33.1802H55.1499" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M61.3291 28.3101C61.3291 27.2166 60.4427 26.3301 59.3491 26.3301C58.2556 26.3301 57.3691 27.2166 57.3691 28.3101V31.3201C57.3691 32.4136 58.2556 33.3001 59.3491 33.3001C60.4427 33.3001 61.3291 32.4136 61.3291 31.3201V28.3101Z" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M61.2091 27.6299L57.6191 32.2799" stroke="#262626" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M67.6397 28.3101C67.6397 27.2166 66.7532 26.3301 65.6597 26.3301C64.5662 26.3301 63.6797 27.2166 63.6797 28.3101V31.3201C63.6797 32.4136 64.5662 33.3001 65.6597 33.3001C66.7532 33.3001 67.6397 32.4136 67.6397 31.3201V28.3101Z" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M67.5197 27.6299L63.9297 32.2799" stroke="#262626" stroke-width="0.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M51.3398 55.6401H56.4898" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M51.3398 57.8804H54.5898" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7402 34.8101H16.8802" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.7402 37.0503H14.9802" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </div>
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 1 }" x-show.transition.in.opacity.duration.600="activeTab === 1">
+                <svg width="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24.3098 63.3898V61.7498C24.3098 61.4398 24.1698 61.1498 23.9398 60.9598L12.3698 51.3698C11.1898 50.3998 10.5098 48.9498 10.5098 47.4198V23.7898C10.5098 22.4398 11.6098 21.3398 12.9598 21.3398C14.1798 21.3398 15.2098 22.2298 15.3798 23.4298L17.8498 40.3098" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36.3095 63.3901V56.3901C36.3095 54.2201 35.3195 52.1701 33.6195 50.8301L20.8295 40.7001C19.7995 39.8801 18.3095 40.0001 17.4295 40.9801C16.4895 42.0101 16.5795 43.6101 17.6195 44.5401L24.3095 50.4501" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36.9295 68.7096V63.3896H21.1895V68.7096" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M55.6904 63.3898V61.7498C55.6904 61.4398 55.8304 61.1498 56.0604 60.9598L67.6304 51.3698C68.8104 50.3998 69.4904 48.9498 69.4904 47.4198V23.7898C69.4904 22.4398 68.3904 21.3398 67.0404 21.3398C65.8204 21.3398 64.7904 22.2298 64.6204 23.4298L62.1504 40.3098" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43.6904 63.3901V56.3901C43.6904 54.2201 44.6804 52.1701 46.3804 50.8301L59.1704 40.7001C60.2004 39.8801 61.6904 40.0001 62.5704 40.9801C63.5104 42.0101 63.4204 43.6101 62.3804 44.5401L55.6904 50.4501" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M43.0703 68.7096V63.3896H58.8103V68.7096" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39.9996 40.17C47.9746 40.17 54.4396 33.705 54.4396 25.73C54.4396 17.755 47.9746 11.29 39.9996 11.29C32.0246 11.29 25.5596 17.755 25.5596 25.73C25.5596 33.705 32.0246 40.17 39.9996 40.17Z" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39.9997 26.5102C40.4305 26.5102 40.7797 26.161 40.7797 25.7302C40.7797 25.2994 40.4305 24.9502 39.9997 24.9502C39.5689 24.9502 39.2197 25.2994 39.2197 25.7302C39.2197 26.161 39.5689 26.5102 39.9997 26.5102Z" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M40 11.29V13.67" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.79 15.52L31.48 17.2" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M54.4398 25.73H52.0498" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M25.5596 25.73H27.9496" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M29.79 35.93L31.48 34.25" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M40 40.1603V37.7803" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M50.2095 35.93L48.5195 34.25" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M50.2095 15.52L48.5195 17.2" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M40 16.7998V25.7298L45.02 30.7398" stroke="#262626" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>                    
+            </div>
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 2 }" x-show.transition.in.opacity.duration.600="activeTab === 2">
+                <svg width="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12.0802 19.8101L8.4502 23.4501" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M8.45043 23.4503L21.3104 36.3103C22.3104 37.3103 23.9404 37.3103 24.9504 36.3103C25.9504 35.3103 25.9504 33.6803 24.9504 32.6703L12.0904 19.8103L7.19043 18.5503L8.45043 23.4503Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.1605 31.8804L20.5205 35.5204" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M10.2607 21.6304L22.2707 33.6304" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M11.27 28.6104L6.5 33.3904L10.87 37.7504L15.64 32.9804" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M17.25 22.6401L22.02 17.8701L26.39 22.2301L21.61 27.0001" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M24.8698 23.7402L23.2798 22.1602" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M23.0798 25.5302L22.0098 24.4502" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14.1691 34.4504L12.5791 32.8604" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M12.3796 36.2302L11.3096 35.1602" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M67.4502 27.3097L69.1602 29.0197L73.5002 24.6797L71.7902 22.9697L67.4502 27.3097Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M61.7332 30.513L58.5371 27.3169L50.6317 35.2223L53.8278 38.4185L61.7332 30.513Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M70.9901 23.7699C70.9901 23.7699 70.1001 23.3399 69.5501 22.3299L69.3501 20.5299L67.8701 19.0499C66.0501 17.2299 63.3101 16.6799 60.9201 17.6599L58.8901 18.4999C58.8901 18.4999 64.3201 18.3599 64.4201 22.0799" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M68.3399 26.4198C68.3399 26.4198 67.6899 25.4498 66.6799 24.8998L61.3999 30.1798L58.8599 27.6398L64.4099 22.0898" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M44.7803 55.23L48.0004 58.39V63.35L43.3604 59.77" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39.3402 40.3501C39.3402 40.3501 30.2302 45.9301 35.5802 60.5301H43.0902C48.4402 45.9301 39.3302 40.3501 39.3302 40.3501" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M33.8902 55.23L30.6802 58.39V63.35L35.3102 59.77" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M44.4399 64.0103V65.6302" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M41.8901 64.3799V66.8799" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M34.2402 64.0103V65.6302" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M36.79 64.3799V66.8799" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39.3403 64.6699V68.0999" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M39.3402 50.4402C40.362 50.4402 41.1902 49.612 41.1902 48.5902C41.1902 47.5685 40.362 46.7402 39.3402 46.7402C38.3185 46.7402 37.4902 47.5685 37.4902 48.5902C37.4902 49.612 38.3185 50.4402 39.3402 50.4402Z" stroke="#007BFF" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M62.7454 31.4966C63.0816 31.4187 63.4182 31.628 63.4877 31.9661C64.5849 37.3032 63.9092 42.8593 61.5537 47.7852C59.1981 52.7111 55.2975 56.7251 50.4543 59.2215C50.1475 59.3796 49.7732 59.2491 49.6228 58.9384C49.4723 58.6277 49.6027 58.2546 49.9093 58.0961C54.4975 55.7234 58.1927 51.9161 60.426 47.246C62.6592 42.5758 63.3031 37.3093 62.2696 32.2485C62.2006 31.9103 62.4091 31.5745 62.7454 31.4966Z" fill="#262626"/>
+                    <path d="M29.0511 59.2523C28.9102 59.5674 28.5401 59.7094 28.2286 59.5606C24.0242 57.5533 20.4601 54.4088 17.9439 50.4778C15.4277 46.5468 14.0644 41.9936 14.002 37.3349C13.9974 36.9898 14.2813 36.7131 14.6264 36.7171C14.9716 36.7211 15.2473 37.0043 15.2523 37.3494C15.3173 41.7642 16.6119 46.0782 18.9967 49.8039C21.3815 53.5296 24.757 56.5116 28.739 58.4191C29.0503 58.5683 29.192 58.9372 29.0511 59.2523Z" fill="#262626"/>
+                    <path d="M24.3146 17.5453C24.1067 17.2697 24.161 16.8771 24.4416 16.6761C27.1256 14.7535 30.1657 13.3804 33.3869 12.6382C36.8114 11.8493 40.3637 11.7911 43.8121 12.4675C47.2605 13.144 50.5276 14.5398 53.4002 16.564C56.1024 18.4682 58.3984 20.888 60.1571 23.6821C60.341 23.9743 60.243 24.3583 59.9464 24.5348C59.6497 24.7113 59.2669 24.6135 59.0826 24.3216C57.4139 21.6784 55.2387 19.3887 52.6802 17.5858C49.9512 15.6628 46.8475 14.3368 43.5715 13.6942C40.2955 13.0515 36.9208 13.1068 33.6676 13.8563C30.6175 14.559 27.7385 15.8572 25.1949 17.6742C24.914 17.8748 24.5226 17.8208 24.3146 17.5453Z" fill="#262626"/>
+                </svg>                    
+            </div>
+            
+        </div>
+        <!-- Right Side Container Ends -->
+
+    </div>
+</section>

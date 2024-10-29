@@ -1,0 +1,219 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from '../../components/Tabs.astro';
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="How to Use CodeNHammer UI Components & Layouts | Quick Setup Guide" description="Step-by-step guide on integrating CodeNHammer components into your projects. Learn how to quickly set up Tailwind and Alpine components for small business websites.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="How To Use"
+        description="Alright, let’s get you up and running with CodeNHammer! We’ve made it super easy to dive in and start building your projects. This guide will walk you through setting up and integrating CodeNHammer components into your project with ease. Follow these steps to bring our customizable layouts and UI components to life on your small business or contractor website.">
+
+        <!-- Step 1 -->
+        <div class="p-4 space-y-2 max-w-3xl">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Step 1: Set Up Your Project Environment</h3>
+            <p class="text-neutral-500 text-base leading-relaxed">Before diving into CodeNHammer components, ensure your project environment is ready:</p>
+            <ol class="list-decimal list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                
+                <!-- Install Tailwind CSS -->
+                <li><b class="text-neutral-700">Install Tailwind CSS</b>: CodeNHammer uses <a href="https://tailwindcss.com/" class="text-blue-500 hover:underline" target="_blank">Tailwind CSS</a> for fast and efficient styling. If Tailwind CSS isn’t already installed, add it by running the following command in your project directory:</li>
+                <div class="relative">
+                    <pre>
+                        <Code class="p-4 rounded-md" code={`npm install -D tailwindcss@latest`} lang="bash" theme="night-owl"/>
+                    </pre>
+                </div>
+                <li>Then, include the Tailwind CSS directives in your main CSS file:</li>
+                <div class="relative">
+                    <pre>
+                        <Code class="p-4 rounded-md" code={`@tailwind base;
+@tailwind components;
+@tailwind utilities;`} lang="css" theme="night-owl"/>
+                    </pre>
+                </div>
+
+                <!-- Install Alpine.js -->
+                <li><b class="text-neutral-700">Include Alpine.js</b>: <a href="https://alpinejs.dev/" class="text-blue-500 hover:underline" target="_blank">Alpine.js</a> powers the interactivity in CodeNHammer components. For Alpine.js, you can quickly add it via CDN by placing the following <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">script</code> tag in your <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">head</code> tag:</li>
+                <div class="relative">
+                    <pre>
+                        <Code class="p-4 rounded-md" code={`<script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>`} lang="html" theme="night-owl"/>
+                    </pre>
+                </div>
+            </ol>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="p-4 space-y-2 max-w-3xl mb-12">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Step 2: Browse and Select Your Components</h3>
+            <ol class="list-decimal list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                <li><b class="text-neutral-700">Navigate the CodeNHammer Library</b>: Find the components you need (such as Buttons, Navigation, and Drawers) on the CodeNHammer website.</li>
+                <li><b class="text-neutral-700">Preview Each Component</b>: CodeNHammer offers live previews for each component. Use these to visualize how each component works and looks before you integrate it.</li>
+                <li><b class="text-neutral-700">Copy the Code</b>: Once you've selected a component, click the "Copy" button to copy the code. This will allow you to paste the component into your project. Here’s an example of a Button component code snippet you can copy and customize:</li>
+                <Tabs>
+
+                    <!-- Preview Tab Start -->
+                    <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+        
+                        <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                            Button
+                        </a>
+        
+                    </div>
+                    <!-- Preview Tab End -->
+        
+                    <!-- Code Tab -->
+                    <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+    Primary Button
+</a>`} lang="html" theme="night-owl" />
+        
+                </Tabs>
+            </ol>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="p-4 space-y-2 max-w-3xl mb-12">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Step 3: Integrate Components into Your Project</h3>
+            <ol class="list-decimal list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                <li><b class="text-neutral-700">Paste the Component Code</b>: Place the copied component code directly into your HTML or project file where you’d like it to appear. For example, here’s a Dropdown component snippet:</li>
+                <Tabs>
+
+                    <!-- Preview Tab Start -->
+                    <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+        
+                        <div x-data="{ dropdownOpen: false }" class="relative">
+
+                            <!-- Button Dropdown -->
+                            <button type="button" @click="dropdownOpen=true" class="flex items-center -mx-3 px-3 py-2 font-medium text-neutral-900" aria-expanded="false">
+                                <span>Dropdown</span> 
+                                <svg :class="{ '-rotate-180' : dropdownOpen }" class="ml-1 size-4 ease-out duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                            </button>
+                        
+                            <!-- Container Transition -->
+                            <div x-show="dropdownOpen" 
+                                @click.away="dropdownOpen=false"
+                                x-transition:enter="ease-out duration-200"
+                                x-transition:enter-start="-translate-y-2"
+                                x-transition:enter-end="translate-y-0"
+                                x-cloak>
+                        
+                                <!-- Links -->
+                                <div class="space-y-4 grid grid-cols-1 *:text-sm *:text-neutral-500 *:mx-4 *:font-medium">
+                                    <ul class="space-y-3">
+                                        <li>
+                                            <a href="#">Link 1</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Link 2</a>
+                                        </li>
+                                        <li>
+                                            <a href="#">Link 3</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        
+                        </div>
+        
+                    </div>
+                    <!-- Preview Tab End -->
+        
+                    <!-- Code Tab -->
+                    <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<div x-data="{ dropdownOpen: false }" class="relative">
+
+    <!-- Button Dropdown -->
+    <button type="button" @click="dropdownOpen=true" class="flex items-center -mx-3 px-3 py-2 font-medium text-neutral-900" aria-expanded="false">
+        <span>Dropdown</span> 
+        <svg :class="{ '-rotate-180' : dropdownOpen }" class="ml-1 size-4 ease-out duration-300" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+    </button>
+
+    <!-- Container Transition -->
+    <div x-show="dropdownOpen" 
+        @click.away="dropdownOpen=false"
+        x-transition:enter="ease-out duration-200"
+        x-transition:enter-start="-translate-y-2"
+        x-transition:enter-end="translate-y-0"
+        x-cloak>
+
+        <!-- Links -->
+        <div class="space-y-4 grid grid-cols-1 *:text-sm *:text-neutral-500 *:mx-4 *:font-medium">
+            <ul class="space-y-3">
+                <li>
+                    <a href="#">Link 1</a>
+                </li>
+                <li>
+                    <a href="#">Link 2</a>
+                </li>
+                <li>
+                    <a href="#">Link 3</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>`} lang="html" theme="night-owl" />
+        
+                </Tabs>
+                <li><b class="text-neutral-700">Customize with Tailwind CSS</b>: Modify Tailwind classes within the component to customize colors, spacing, and styling. For example, change <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">text-neutral-900</code> to <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">text-green-500</code> to match your brand colors.</li>
+                <li><b class="text-neutral-700">Add Interactivity with Alpine.js</b>: In this example, the Dropdown component uses Alpine.js for toggling visibility. You can adapt this to add any dynamic behavior your project requires.</li>
+            </ol>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="p-4 space-y-2 max-w-3xl mb-12">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Step 4: Adjust for Responsiveness</h3>
+            <p class="text-neutral-500 text-base leading-relaxed">CodeNHammer components are built with responsiveness in mind, but you can further customize their behavior for various screen sizes:</p>
+            <ul class="list-disc list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                <li><b class="text-neutral-700">Use Tailwind CSS Responsive Classes</b>: CodeNHammer components are responsive by design. For further customization, use Tailwind's responsive classes like <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">sm:</code>, <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">md:</code>, <code class="text-neutral-700 bg-neutral-100 p-1 rounded-md">lg:</code>, etc. to control how components behave on different screen sizes. Here’s an example of a responsive button:</li>
+                <Tabs>
+
+                    <!-- Preview Tab Start -->
+                    <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+        
+                        <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 text-neutral-50 rounded-md bg-neutral-900 sm:bg-green-500 md:bg-red-500 lg:bg-purple-500">
+                            Button
+                        </a>
+        
+                    </div>
+                    <!-- Preview Tab End -->
+        
+                    <!-- Code Tab -->
+                    <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 text-neutral-50 rounded-md bg-neutral-900 sm:bg-green-500 md:bg-red-500 lg:bg-purple-500">
+    Button
+</a>`} lang="html" theme="night-owl" />
+        
+                </Tabs>
+                <li><b class="text-neutral-700">Test Across Devices</b>: Preview your site on various devices to ensure each component adapts well to mobile, tablet, and desktop views.</li>
+            </ul>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="p-4 space-y-2 max-w-3xl mb-12">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Step 5: Regularly Check for Updates</h3>
+            <p class="text-neutral-500 text-base leading-relaxed">CodeNHammer is continuously updated with new components and improvements. To stay current:</p>
+            <ul class="list-disc list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                <li><b class="text-neutral-700">Subscribe to Updates</b>: Join our email list to be notified of new releases.</li>
+                <li><b class="text-neutral-700">Check the Blog</b>: Visit the <a href="/blog" class="text-blue-500 hover:underline">CodeNHammer Blog</a> regularly for tutorials, updates, and new component announcements.</li>
+            </ul>
+        </div>
+
+        <!-- FAQ -->
+        <div class="p-4 space-y-2 max-w-3xl mb-12">
+            <h3 class="text-2xl text-neutral-900 font-semibold">Frequently Asked Questions</h3>
+            <ol class="list-decimal list-inside text-neutral-500 text-base leading-relaxed space-y-4">
+                <li><b class="text-neutral-700">Do I need a specific framework to use CodeNHammer?</b><br> No, CodeNHammer components are built with Tailwind CSS and Alpine.js, which are compatible with any front-end project or CMS.</li>
+                <li><b class="text-neutral-700">Can I customize the components to fit my brand?</b><br> Absolutely! All CodeNHammer components are fully customizable using Tailwind CSS classes, allowing you to adapt colors, spacing, and styles effortlessly.</li>
+                <li><b class="text-neutral-700">Are CodeNHammer components optimized for mobile?</b><br> Yes, each component is responsive and designed to work seamlessly on mobile, tablet, and desktop devices.</li>
+            </ol>
+        </div>
+
+    </DocsLayout>
+
+</MainLayout>

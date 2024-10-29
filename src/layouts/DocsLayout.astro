@@ -1,0 +1,40 @@
+---
+const {header} = Astro.props;
+const {description} = Astro.props;
+
+//Layouts
+import Footer1 from "../components/Footer.astro";
+
+//Components
+import Sidebar from "../components/Sidebar.astro";
+
+---
+
+<section>
+
+    <!-- Grid Container Start -->
+    <div>
+
+        <Sidebar></Sidebar>
+
+        <!-- Container Start -->
+        <div class="py-16 px-2 max-w-7xl mx-auto pt-10 lg:my-8 xl:pl-[12rem]">
+
+            <!-- Header & Description -->
+            <div class="p-4 space-y-2 max-w-5xl mb-12 border-b border-neutral-200">
+                <h2 class="text-4xl text-neutral-900 font-bold">{header}</h2>
+                <p class="text-neutral-500 text-base leading-relaxed">{description}</p>
+            </div>
+
+            <!-- Content Slot -->
+            <slot></slot>
+
+            <Footer1></Footer1>
+
+        </div>
+        <!-- Container Start -->
+
+    </div>
+    <!-- Grid Container End -->
+
+</section>

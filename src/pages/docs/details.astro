@@ -1,0 +1,216 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Detailed Product & Service Page Layouts for Contractors | CodeNHammer" description="Present your products and services clearly with CodeNHammer’s professional layouts. Designed to showcase contractor services effectively.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Details Layouts"
+        description="Dive into the specifics with our Details Section. Provide in-depth information about your services, features, or products.">
+
+        <Tabs subheading="Details Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134706/Details_1_anfqtj.jpg" alt="Details Layout 1" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section> 
+    <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+
+        <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
+
+            <!-- Details Container Start -->
+            <div class="space-y-8 mb-8">
+
+                <!-- Header & Description -->
+                <div class="space-y-2">
+                    <span class="text-sm font-medium text-neutral-500">Service Details</span>
+                    <h2 class="text-4xl font-bold text-neutral-900">Learn more about this service</h2>
+                    <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                </div>
+
+                <!-- List Start -->
+                <ul role="list" class="space-y-5">
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-6 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-sm font-medium text-neutral-900">Benefit 1</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-6 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-sm font-medium text-neutral-900">Benefit 2</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-6 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-sm font-medium text-neutral-900">Benefit 3</span>
+                    </li>
+                </ul>
+                <!-- List End -->
+
+                <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            </div>
+            <!-- Details Container End -->
+
+            <!-- Insert Image Here -->
+            <img src="image.jpg" class="mb-4 w-full rounded-md lg:mb-0 lg:flex" alt="Blank image" />
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Details Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134706/Details_2_paoihb.jpg" alt="Details Layout 2" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section> 
+    <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+
+        <div class="gap-8 items-center grid lg:grid lg:grid-cols-2 xl:gap-16">
+
+            <!-- Insert Image Here -->
+            <img src="image.jpg" class="order-1 mb-4 w-full rounded-md lg:mb-0 lg:flex lg:order-none" alt="Blank image" />
+
+            <!-- Details Container Start -->
+            <div class="space-y-8 my-4 lg:my-0">
+
+                <!-- Header & Description -->
+                <div class="space-y-2">
+                    <span class="text-sm font-medium text-neutral-500">Service Details</span>
+                    <h2 class="text-4xl font-bold text-neutral-900">Learn more about this service</h2>
+                    <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                    <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+
+                <div class="flex gap-3">
+                    <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                        Get A Quote
+                    </a>
+                    <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                        Learn More
+                    </a>
+                </div>
+                
+            </div>
+            <!-- Details Container End -->
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Details Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134706/Details_3_f1qkh1.jpg" alt="Details Layout 3" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section> 
+    <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+
+        <div class="gap-8 items-center grid lg:grid lg:grid-cols-2 xl:gap-16">
+
+            <!-- Insert Image Here -->
+            <img src="image.jpg" class="order-1 mb-4 w-full rounded-md lg:order-none lg:mb-0 lg:flex" alt="Blank image" />
+
+            <!-- Details Container Start -->
+            <div class="space-y-8 my-8 lg:my-0">
+
+                <!-- Header & Description -->
+                <div class="space-y-2">
+                    <span class="text-sm font-medium text-neutral-500">Service Details</span>
+                    <h2 class="text-4xl font-bold text-neutral-900">Learn more about this service</h2>
+                    <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                </div>
+
+                <!-- Subsections Start -->
+                <div class="pt-7 my-7 grid grid-cols-1 lg:grid-cols-2 gap-6 border-t border-neutral-200">
+
+                    <div class="space-y-2">
+                        <div class="flex gap-2">
+                            <svg class="flex-shrink-0 size-6" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                                <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                                <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                                <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                            </svg>   
+                            <span class="text-md font-semibold text-neutral-900">Subheading 1</span>                             
+                        </div>
+                        <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </div>
+
+                    <div class="space-y-2">
+                        <div class="flex gap-2">
+                            <svg class="flex-shrink-0 size-6" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                                <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                                <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                                <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                            </svg>   
+                            <span class="text-md font-semibold text-neutral-900">Subheading 2</span>                             
+                        </div>
+                        <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros.</p>
+                    </div>
+
+                </div>
+                <!-- Subsections End -->
+
+                <!-- Button Group -->
+                <div class="flex gap-3">
+                    <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                        Get A Quote
+                    </a>
+                    <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                        Learn More
+                    </a>
+                </div>
+                
+            </div>
+            <!-- Details Container End -->
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

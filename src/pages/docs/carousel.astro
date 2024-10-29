@@ -1,0 +1,323 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Dynamic Carousel UI Components for Contractor Portfolios | CodeNHammer" description="Showcase contractor portfolios with CodeNHammer’s dynamic carousel components. Create engaging, interactive image sliders for small business websites.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Carousel"
+        description="Showcase images or content in a sleek, interactive carousel. Ideal for highlighting featured projects, testimonials, or products.">
+
+        <Tabs subheading="Carousel Sm">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4 min-h-48">
+
+                <div class="flex items-center justify-center m-2 md:m-8">
+                    <div x-data="{
+                                activeIndex: 0,
+                                images: [
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644381/Image_-_1_imymsc.jpg', alt: 'Photo of House 01' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_2_z5dxga.jpg', alt: 'Photo of House 02' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_3_fc04xn.jpg', alt: 'Photo of House 03' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644373/Image_-_4_viy8kw.jpg', alt: 'Photo of House 04' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644380/Image_-_5_boy2rq.jpg', alt: 'Photo of House 05' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_6_ii6jti.jpg', alt: 'Photo of House 06' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644374/Image_-_7_kdkpn4.jpg', alt: 'Photo of House 07' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644376/Image_-_8_ahqh4s.jpg', alt: 'Photo of House 08' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644379/Image_-_9_vyp42h.jpg', alt: 'Photo of House 09' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_10_eijklp.jpg', alt: 'Photo of House 10' }
+                                ],
+                                next() {
+                                    this.activeIndex = (this.activeIndex + 1) % this.images.length;
+                                },
+                                prev() {
+                                    this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+                                },
+                                setActive(index) {
+                                    this.activeIndex = index;
+                                }
+                            }" class="w-full max-w-5xl mx-auto">
+                
+                        <!-- Slide Container Start -->
+                        <div class="relative w-full h-96 overflow-hidden">
+                
+                            <!-- Image Slide -->
+                            <template x-for="(image, index) in images" :key="index">
+                                <div 
+                                    x-show="activeIndex === index" 
+                                    x-transition:enter="transition ease-out duration-500" 
+                                    x-transition:enter-start="opacity-0" 
+                                    x-transition:enter-end="opacity-100" 
+                                    x-transition:leave="transition ease-in duration-500" 
+                                    x-transition:leave-start="opacity-100" 
+                                    x-transition:leave-end="opacity-0" 
+                                    class="absolute inset-0 flex items-center justify-center w-full h-full">
+                
+                                    <img :src="image.photo" :alt="image.alt" class="object-cover w-full h-full rounded-md shadow-md">
+                
+                                </div>
+                            </template>
+                
+                            <!-- Prev Button -->
+                            <button @click="prev" class="absolute inset-y-0 left-0 p-3 m-2 size-12 bg-white/25 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                            </button>
+                
+                            <!-- Next Button -->
+                            <button @click="next" class="absolute inset-y-0 right-0 p-3 m-2 size-12 bg-white/25 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                            </button>
+                            
+                        </div>
+                        <!-- Slide Container End -->
+                
+                        <!-- Dot Indicators -->
+                        <div class="flex justify-center mt-4 space-x-2">
+                            <template x-for="(image, index) in images" :key="index">
+                                <button @click="setActive(index)" :class="{'bg-neutral-800': activeIndex === index, 'bg-neutral-400': activeIndex !== index}" class="size-2 rounded-full md:size-3"></button>
+                            </template>
+                        </div>
+                
+                    </div>
+                </div>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<div class="flex items-center justify-center m-2 md:m-8">
+    <div x-data="{
+                activeIndex: 0,
+                images: [
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644381/Image_-_1_imymsc.jpg', alt: 'Photo of House 01' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_2_z5dxga.jpg', alt: 'Photo of House 02' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_3_fc04xn.jpg', alt: 'Photo of House 03' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644373/Image_-_4_viy8kw.jpg', alt: 'Photo of House 04' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644380/Image_-_5_boy2rq.jpg', alt: 'Photo of House 05' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_6_ii6jti.jpg', alt: 'Photo of House 06' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644374/Image_-_7_kdkpn4.jpg', alt: 'Photo of House 07' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644376/Image_-_8_ahqh4s.jpg', alt: 'Photo of House 08' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644379/Image_-_9_vyp42h.jpg', alt: 'Photo of House 09' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_10_eijklp.jpg', alt: 'Photo of House 10' }
+                ],
+                next() {
+                    this.activeIndex = (this.activeIndex + 1) % this.images.length;
+                },
+                prev() {
+                    this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+                },
+                setActive(index) {
+                    this.activeIndex = index;
+                }
+            }" class="w-full max-w-5xl mx-auto">
+
+        <!-- Slide Container Start -->
+        <div class="relative w-full h-96 overflow-hidden">
+
+            <!-- Image Slide -->
+            <template x-for="(image, index) in images" :key="index">
+                <div 
+                    x-show="activeIndex === index" 
+                    x-transition:enter="transition ease-out duration-500" 
+                    x-transition:enter-start="opacity-0" 
+                    x-transition:enter-end="opacity-100" 
+                    x-transition:leave="transition ease-in duration-500" 
+                    x-transition:leave-start="opacity-100" 
+                    x-transition:leave-end="opacity-0" 
+                    class="absolute inset-0 flex items-center justify-center w-full h-full">
+
+                    <img :src="image.photo" :alt="image.alt" class="object-cover w-full h-full rounded-md shadow-md">
+
+                </div>
+            </template>
+
+            <!-- Prev Button -->
+            <button @click="prev" class="absolute inset-y-0 left-0 p-3 m-2 size-12 bg-white/25 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+            </button>
+
+            <!-- Next Button -->
+            <button @click="next" class="absolute inset-y-0 right-0 p-3 m-2 size-12 bg-white/25 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+            </button>
+            
+        </div>
+        <!-- Slide Container End -->
+
+        <!-- Dot Indicators -->
+        <div class="flex justify-center mt-4 space-x-2">
+            <template x-for="(image, index) in images" :key="index">
+                <button @click="setActive(index)" :class="{'bg-neutral-800': activeIndex === index, 'bg-neutral-400': activeIndex !== index}" class="size-2 rounded-full md:size-3"></button>
+            </template>
+        </div>
+
+    </div>
+</div>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Carousel Lg">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4 min-h-48">
+
+                <div class="flex items-center justify-center m-2 md:m-8">
+                    <div x-data="{
+                                activeIndex: 0,
+                                images: [
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644381/Image_-_1_imymsc.jpg', alt: 'Photo of House 01' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_2_z5dxga.jpg', alt: 'Photo of House 02' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_3_fc04xn.jpg', alt: 'Photo of House 03' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644373/Image_-_4_viy8kw.jpg', alt: 'Photo of House 04' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644380/Image_-_5_boy2rq.jpg', alt: 'Photo of House 05' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_6_ii6jti.jpg', alt: 'Photo of House 06' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644374/Image_-_7_kdkpn4.jpg', alt: 'Photo of House 07' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644376/Image_-_8_ahqh4s.jpg', alt: 'Photo of House 08' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644379/Image_-_9_vyp42h.jpg', alt: 'Photo of House 09' },
+                                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_10_eijklp.jpg', alt: 'Photo of House 10' }
+                                ],
+                                next() {
+                                    this.activeIndex = (this.activeIndex + 1) % this.images.length;
+                                },
+                                prev() {
+                                    this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+                                },
+                                setActive(index) {
+                                    this.activeIndex = index;
+                                }
+                            }" class="w-full mx-auto">
+                
+                        <!-- Slide Container Start -->
+                        <div class="relative w-full h-lvh overflow-hidden">
+                
+                            <!-- Image Slide -->
+                            <template x-for="(image, index) in images" :key="index">
+                                <div 
+                                    x-show="activeIndex === index" 
+                                    x-transition:enter="transition ease-out duration-500" 
+                                    x-transition:enter-start="opacity-0" 
+                                    x-transition:enter-end="opacity-100" 
+                                    x-transition:leave="transition ease-in duration-500" 
+                                    x-transition:leave-start="opacity-100" 
+                                    x-transition:leave-end="opacity-0" 
+                                    class="absolute inset-0 flex items-center justify-center w-full h-full">
+                
+                                    <img :src="image.photo" :alt="image.alt" class="object-cover w-full h-full rounded-md shadow-md">
+                
+                                </div>
+                            </template>
+                
+                            <!-- Prev Button -->
+                            <button @click="prev" class="absolute inset-y-0 left-0 p-3 m-2 size-12 bg-white/10 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+                            </button>
+                
+                            <!-- Next Button -->
+                            <button @click="next" class="absolute inset-y-0 right-0 p-3 m-2 size-12 bg-white/10 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+                            </button>
+                            
+                        </div>
+                        <!-- Slide Container End -->
+                
+                        <!-- Dot Indicators -->
+                        <div class="flex justify-center mt-4 space-x-2">
+                            <template x-for="(image, index) in images" :key="index">
+                                <button @click="setActive(index)" :class="{'bg-neutral-800': activeIndex === index, 'bg-neutral-400': activeIndex !== index}" class="size-2 rounded-full md:size-3"></button>
+                            </template>
+                        </div>
+                
+                    </div>
+                </div>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<div class="flex items-center justify-center m-2 md:m-8">
+    <div x-data="{
+                activeIndex: 0,
+                images: [
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644381/Image_-_1_imymsc.jpg', alt: 'Photo of House 01' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_2_z5dxga.jpg', alt: 'Photo of House 02' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_3_fc04xn.jpg', alt: 'Photo of House 03' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644373/Image_-_4_viy8kw.jpg', alt: 'Photo of House 04' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644380/Image_-_5_boy2rq.jpg', alt: 'Photo of House 05' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644375/Image_-_6_ii6jti.jpg', alt: 'Photo of House 06' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644374/Image_-_7_kdkpn4.jpg', alt: 'Photo of House 07' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644376/Image_-_8_ahqh4s.jpg', alt: 'Photo of House 08' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644379/Image_-_9_vyp42h.jpg', alt: 'Photo of House 09' },
+                    { photo: 'https://res.cloudinary.com/codenhammer/image/upload/v1729644370/Image_-_10_eijklp.jpg', alt: 'Photo of House 10' }
+                ],
+                next() {
+                    this.activeIndex = (this.activeIndex + 1) % this.images.length;
+                },
+                prev() {
+                    this.activeIndex = (this.activeIndex - 1 + this.images.length) % this.images.length;
+                },
+                setActive(index) {
+                    this.activeIndex = index;
+                }
+            }" class="w-full mx-auto">
+
+        <!-- Slide Container Start -->
+        <div class="relative w-full h-lvh overflow-hidden">
+
+            <!-- Image Slide -->
+            <template x-for="(image, index) in images" :key="index">
+                <div 
+                    x-show="activeIndex === index" 
+                    x-transition:enter="transition ease-out duration-500" 
+                    x-transition:enter-start="opacity-0" 
+                    x-transition:enter-end="opacity-100" 
+                    x-transition:leave="transition ease-in duration-500" 
+                    x-transition:leave-start="opacity-100" 
+                    x-transition:leave-end="opacity-0" 
+                    class="absolute inset-0 flex items-center justify-center w-full h-full">
+
+                    <img :src="image.photo" :alt="image.alt" class="object-cover w-full h-full rounded-md shadow-md">
+
+                </div>
+            </template>
+
+            <!-- Prev Button -->
+            <button @click="prev" class="absolute inset-y-0 left-0 p-3 m-2 size-12 bg-white/10 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" /></svg>
+            </button>
+
+            <!-- Next Button -->
+            <button @click="next" class="absolute inset-y-0 right-0 p-3 m-2 size-12 bg-white/10 rounded-full top-1/2 -translate-y-1/2 hover:bg-white/20">
+                <svg class="size-6 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" /></svg>
+            </button>
+            
+        </div>
+        <!-- Slide Container End -->
+
+        <!-- Dot Indicators -->
+        <div class="flex justify-center mt-4 space-x-2">
+            <template x-for="(image, index) in images" :key="index">
+                <button @click="setActive(index)" :class="{'bg-neutral-800': activeIndex === index, 'bg-neutral-400': activeIndex !== index}" class="size-2 rounded-full md:size-3"></button>
+            </template>
+        </div>
+
+    </div>
+</div>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

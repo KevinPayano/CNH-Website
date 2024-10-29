@@ -1,0 +1,140 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Professional Header Layouts for Small Business Branding | CodeNHammer" description="Enhance your branding with CodeNHammer’s functional, visually appealing header layouts. Designed for contractors and small businesses.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Header Layouts"
+        description="Create a welcoming introduction with our Header Section. Customize with your brand’s logo, navigation links, and other key elements.">
+
+        <Tabs subheading="Header Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134707/Header_1_shlirz.jpg" alt="Header Layout 1" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:items-center lg:px-8">
+
+        <!-- Header & Description -->
+        <div class="max-w-screen-md space-y-2 mb-8">
+            <span class="text-sm font-medium text-neutral-500">Get Started</span>
+            <h2 class="text-neutral-900 text-4xl font-bold">Multiple Sites, One Solution</h2>
+            <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+        </div>
+        
+        <!-- Button Group -->
+        <div class="flex gap-3">
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                Get A Quote
+            </a>
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                Learn More
+            </a>
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Header Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134708/Header_2_ypn8ng.jpg" alt="Header Layout 2" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section class="relative bg-[url('/image.jpg')] bg-cover bg-center bg-no-repeat">
+    <div class="absolute inset-0 bg-black/60"></div>
+
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:items-center lg:px-8">
+
+        <div class="max-w-xl text-left">
+
+            <!-- Header & Description Container -->
+            <div class="max-w-screen-md space-y-2 mb-8">
+                <span class="text-sm font-medium text-neutral-100">Get Started</span>
+                <h2 class="text-neutral-50 text-4xl font-bold">Multiple Sites, One Solution</h2>
+                <p class="text-base text-neutral-100">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+            </div>
+
+            <!-- Button Group Container -->
+            <div class="mt-8 flex flex-wrap gap-3 text-center">
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide text-neutral-950 transition-colors border-2 border-neutral-50 duration-200 rounded-md bg-neutral-50 hover:bg-neutral-200 hover:border-neutral-200">
+                    Get A Quote
+                </a>
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-50 border-neutral-50 hover:bg-neutral-50/5">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Header Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134708/Header_3_n2siqn.jpg" alt="Header Layout 3" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="mx-auto max-w-screen-xl text-center px-4 py-32 sm:px-6 lg:items-center lg:px-8">
+
+        <!-- Header & Description Container -->
+        <div class="space-y-2 mb-8">
+            <span class="text-sm font-medium text-neutral-500">Get Started</span>
+            <h2 class="text-neutral-900 text-4xl font-bold">Multiple Sites, One Solution</h2>
+            <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+        </div>
+        
+        <!-- Button Group Container -->
+        <div class="flex gap-3 justify-center">
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                Get A Quote
+            </a>
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                Learn More
+            </a>
+        </div> 
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

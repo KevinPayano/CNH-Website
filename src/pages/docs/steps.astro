@@ -1,0 +1,417 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Step-by-Step Layouts for Service Processes | CodeNHammer" description="Clearly present service steps or processes with CodeNHammer’s well-structured step-by-step layouts for small businesses and contractors.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Steps Layouts"
+        description="Guide users through processes with our Steps Section. Break down complex tasks into simple, easy-to-follow steps.">
+
+        <Tabs subheading="Steps Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134710/Steps_1_aclv3x.jpg" alt="Steps Layout 1">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="gap-8 space-y-12 items-start py-20 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-12 lg:py-28">
+        
+        <!-- Tagline, Header, Description w/ Button -->
+        <div class="space-y-2">
+            <span class="text-sm text-neutral-500 font-medium">How It Works</span>
+            <h2 class="text-4xl text-neutral-900 font-bold">Discover how we achieve our goal</h2>
+            <p class="max-w-2xl text-neutral-500 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea.</p>
+            <div class="pt-4">
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                    Get A Quote
+                </a>
+            </div>
+        </div>
+
+        <!-- Steps Container Starts -->
+        <div class=" flex-col justify-start items-start gap-4 inline-flex">
+
+            <!-- Step 1 Container Start -->
+            <div class="gap-8 inline-flex">
+
+                <!-- Icon w/ Line Container -->
+                <div class="grid grid-col-1">
+                    <div class="flex my-4 justify-center items-center size-10">
+                        <svg width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg>                                 
+                    </div>     
+                    <div class="h-28 w-0 origin-top-left border border-neutral-400 flex justify-self-center"></div>      
+                </div>
+
+                <!-- Text Container -->
+                <div class="flex-col inline-flex space-y-2">
+                    <h4 class="text-2xl font-semibold text-neutral-900">Step 01</h4>
+                    <p class="text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </div>
+            <!-- Step 1 Container Ends -->
+
+            <!-- Step 2 Container Starts -->
+            <div class="gap-8 inline-flex">
+            
+                <!-- Icon w/ Line Container -->
+                <div class="grid grid-col-1">
+                    <div class="flex my-4 justify-center items-center size-10">
+                        <svg width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg>     
+                    </div>     
+                    <div class="h-28 w-0 origin-top-left border border-neutral-400 flex justify-self-center"></div>      
+                </div>
+
+                <!-- Text Container -->
+                <div class="flex-col inline-flex space-y-2">
+                    <h4 class="text-2xl font-semibold text-neutral-900">Step 02</h4>
+                    <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </div>
+            <!-- Step 2 Container Ends -->
+            
+            <!-- Step 3 Container Starts -->
+            <div class="gap-8 inline-flex">
+
+                <!-- Icon Container -->
+                <div class="grid grid-col-1 content-start">
+                    <div class="flex my-4 justify-center items-center size-10">
+                        <svg width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg> 
+                    </div>           
+                </div>
+
+                <!-- Text Container -->
+                <div class="flex-col inline-flex space-y-2">
+                    <h4 class="text-2xl font-semibold text-neutral-900">Step 03</h4>
+                    <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                </div>
+            </div>
+            <!-- Step 3 Container Ends -->
+
+        </div>
+        <!-- Steps Container Ends -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Steps Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134709/Steps_2_xwz1xc.jpg" alt="Steps Layout 2">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl sm:py-16 lg:px-6">
+
+        <!-- Tagline, Header & Description Container -->
+        <div class="max-w-screen-md space-y-2 mb-8">
+            <span class="text-sm font-medium text-neutral-500">How It Works</span>
+            <h2 class="text-4xl font-bold text-neutral-900">Discover how we achieve our goal</h2>
+            <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+        </div>
+
+        <!-- Feature List Container Start -->
+        <div class="space-y-8 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-8 xl:gap-12 md:space-y-0">
+
+            <!-- Feature 1 Start -->
+            <div>
+                <div class="flex justify-center items-center mb-4 size-10 bg-neutral-50 rounded lg:size-16">
+                    <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                        <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                        <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                        <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                    </svg>                        
+                </div>
+
+                <!-- Header -->
+                <h4 class="mb-2 text-2xl font-semibold text-neutral-900">Step 01</h4>
+
+                <!-- List Start -->
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                </ul>
+                <!-- List End -->
+            </div>
+            <!-- Feature 1 End -->
+
+            <!-- Feature 2 Start -->
+            <div>
+                <div class="flex justify-center items-center mb-4 size-10 bg-neutral-50 rounded lg:size-16">
+                    <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                        <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                        <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                        <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                    </svg>                        
+                </div>
+
+                <!-- Header -->
+                <h4 class="mb-2 text-2xl font-semibold text-neutral-900">Step 02</h4>
+
+                <!-- List Start -->
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                </ul>
+                <!-- List End -->
+            </div>
+            <!-- Feature 2 End -->
+
+            <!-- Feature 3 Start -->
+            <div>
+                <div class="flex justify-center items-center mb-4 size-10 bg-neutral-50 rounded lg:size-16">
+                    <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                        <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                        <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                        <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                    </svg>                        
+                </div>
+
+                <!-- Header -->
+                <h4 class="mb-2 text-2xl font-semibold text-neutral-900">Step 03</h4>
+
+                <!-- List Start -->
+                <ul role="list" class="my-6 lg:mb-0 space-y-4">
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                    <li class="flex items-center space-x-2">
+                        <svg class="flex-shrink-0 size-4 text-neutral-900 lg:size-5" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
+                        <span class="text-base text-neutral-500">Lorem ipsum dolor</span>
+                    </li>
+                </ul>
+                <!-- List End -->
+            </div>
+            <!-- Feature 3 End -->
+
+        </div>
+        <!-- Feature List Container End -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Steps Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134710/Steps_3_mysxae.jpg" alt="Steps Layout 3">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div x-data="{ activeTab: 0, activeAccordion: 'accordion-0', setActiveAccordion(id) { if (this.activeAccordion !== id) { this.activeAccordion = id; } } }" class="gap-8 items-center py-20 px-4 mx-auto max-w-screen-xl lg:grid lg:grid-cols-2 xl:gap-16 sm:py-16 lg:px-12 lg:py-28">
+        
+        <!-- Left Side Container Starts -->
+        <div class="">
+
+            <!-- Tagline & Header Container -->
+            <div class="max-w-screen-md space-y-2 mb-8">
+                <span class="text-sm font-medium text-neutral-500">How It Works</span>
+                <h2 class="text-neutral-900 text-4xl font-bold">Discover how we achieve our goal</h2>
+                <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+            </div>
+
+            <!-- Tabs Container Starts -->
+            <div class=" mb-6 space-y-4 lg:space-y-8 *:cursor-pointer">
+                
+                <!-- Tab 1 -->
+                <div x-data="{ id: 'accordion-0' }" class="flex p-6 border rounded-md border-neutral-300 bg-white hover:bg-neutral-50" :class="{'bg-neutral-50': activeTab === 0 }" @click="activeTab = 0; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0">
+                        <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Step 01</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-neutral-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+                <!-- Tab 2 -->
+                <div x-data="{ id: 'accordion-1' }" class="flex p-6 border rounded-md border-neutral-300 bg-white hover:bg-neutral-50" :class="{'bg-neutral-50': activeTab === 1 }" @click="activeTab = 1; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0">
+                        <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Step 02</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-neutral-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+                <!-- Tab 3 -->
+                <div x-data="{ id: 'accordion-2' }" class="flex p-6 border rounded-md border-neutral-300 bg-white hover:bg-neutral-50" :class="{'bg-neutral-50': activeTab === 2 }" @click="activeTab = 2; setActiveAccordion(id)">
+                    
+                    <!-- Icon SVG -->
+                    <div class="flex justify-center items-center mr-4 size-6 shrink-0">
+                        <svg class="size-5 lg:size-8" width="150" height="168" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                            <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                            <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                            <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                        </svg>
+                    </div>
+
+                    <!-- Header & Text -->
+                    <div class="w-full space-y-2">
+                        <h4 class="text-2xl font-semibold text-neutral-900">Step 03</h4>
+                        <p x-show="activeAccordion == id" x-collapse x-cloak class="text-neutral-500 text-base">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.</p>
+                    </div>
+
+                    <!-- Arrow -->
+                    <div>
+                        <svg class="size-5 duration-200 ease-out text-neutral-600" :class="{ 'rotate-180': activeAccordion == id }" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+
+                </div>
+
+            </div>
+            <!-- Tabs Container Ends -->
+
+        </div>
+        <!-- Left Side Container Ends -->
+
+        <!-- Right Side Container Starts -->
+        <div class="relative flex justify-center *:mb-4 *:lg:mb-0 *:rounded-md">
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 0 }" x-show.transition.in.opacity.duration.600="activeTab === 0">
+                
+                <!-- Insert Tab 1 Image Here -->
+                <img src="image.jpg" class="rounded-md" alt='Blank Image' />                    
+            </div>
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 1 }" x-show.transition.in.opacity.duration.600="activeTab === 1">
+                
+                <!-- Insert Tab 2 Image Here -->
+                <img src="image.jpg" class="rounded-md" alt='Blank Image' />                    
+            </div>
+
+            <div class="md:w-1/2 lg:w-full" :class="{ 'active': activeTab === 2 }" x-show.transition.in.opacity.duration.600="activeTab === 2">
+                
+                <!-- Insert Tab 3 Image Here -->
+                <img src="image.jpg" class="rounded-md" alt='Blank Image' />                    
+            </div>
+            
+        </div>
+        <!-- Right Side Container Ends -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

@@ -1,107 +1,22 @@
 ---
-import Tagline from "../components/Tagline.astro";
-import Subheading from "../components/Subheading.astro";
+//Components
+import Accordion from "../components/Accordion.astro";
+
 ---
 
-<section class="">
-    <div class="py-20 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-6 ">
+<section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl space-y-8 sm:py-16 lg:px-6 lg:space-y-12">
 
-        <div class="text-center">
-            <Tagline>FAQs</Tagline>
-            <Subheading>Your Questions Answered</Subheading>
+        <!-- Header & Description Container -->
+        <div class="mx-auto max-w-screen-md space-y-2 text-center">
+            <span class="text-sm font-medium text-blue-500">Frequently Asked Questions</span>
+            <h2 class="text-4xl font-bold text-neutral-900">Got Questions? We've Got Answers!</h2>
         </div>
-        
+
+        <!-- Accordion Component Container -->
         <div class="mx-auto max-w-screen-md">
-
-            <!-- Accordion Container Start -->
-            <div x-data="{selected:null}" >
-                
-                <!-- Tab 1 -->
-                <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 1 ? selected = 1 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span class="group-hover:text-zinc-200">What does "Unlimited Content Editing" mean?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 1}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container1" x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">You can add an unlimited number of content editing requests to your queue. Requests are worked on one at a time, every single business day. Revisions are unlimited as well.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 2 -->
-                <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 2 ? selected = 2 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span class="group-hover:text-zinc-200">Who will I be working with?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 2}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container2" x-bind:style="selected == 2 ? 'max-height: ' + $refs.container2.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">You might be surprised to hear this, but CodeNHammer is actually an agency of one. This means you'll work directly with me, founder of CodeNHammer.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 3 -->
-                <div class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 3 ? selected = 3 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span class="group-hover:text-zinc-200">Is there a limit to how many requests I can have?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 3}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container3" x-bind:style="selected == 3 ? 'max-height: ' + $refs.container3.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">Once subscribed, you're able to add as many requests to your queue as you'd like, and they will be delivered one by one.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 4 -->
-                <div id="tab4" class="border-b border-gray-700">
-                    <button type="button" @click="selected !== 4 ? selected = 4 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200">
-                        <span class="group-hover:text-zinc-200">What if I don't like the website design?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 4}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container4" x-bind:style="selected == 4 ? 'max-height: ' + $refs.container4.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">No worries! We'll continue to revise the website design until you're 100% satisfied. Design revisions end when the website is published live online.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 5 -->
-                <div id="tab5" class="border-b border-gray-700 ">
-                    <button type="button" @click="selected !== 5 ? selected = 5 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-5" aria-expanded="false" aria-controls="accordion-flush-body-5">
-                        <span class="group-hover:text-zinc-200">Are there any refunds if I don't like the service?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 5}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container5" x-bind:style="selected == 5 ? 'max-height: ' + $refs.container5.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">Due to the high quality nature of the work, there will be no refunds issued.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Tab 6 -->
-                <div id="tab5" class="border-b border-gray-700 ">
-                    <button type="button" @click="selected !== 6 ? selected = 6 : selected = null" class="group flex justify-between items-center py-5 w-full font-medium text-left text-gray-400 hover:text-zinc-200" data-accordion-target="#accordion-flush-body-6" aria-expanded="false" aria-controls="accordion-flush-body-6">
-                        <span class="group-hover:text-zinc-200">What happens to my website if I decide to cancel my subscription?</span>
-                        <svg class="w-6 h-6 shrink-0 transition-all duration-300" :class="{'!rotate-180': selected == 6}" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-                    </button>
-                    <div x-ref="container6" x-bind:style="selected == 6 ? 'max-height: ' + $refs.container6.scrollHeight + 'px' : ''" class="relative overflow-hidden transition-all max-h-0 duration-700">
-                        <div class="py-3">
-                            <p class="mb-2 text-gray-400">We understand that flexibility is key for our clients, which is why our subscriptions come with no long-term contracts, allowing you to cancel at any-time. If you decide to cancel your subscription, here's what happens:</long-term></p>
-                            <ul class="pl-5 list-disc text-gray-400 space-y-3">
-                                <li><span class="font-medium italic text-zinc-200">Domain Name:</span> You retain full ownership of your domain name. This means you're free to transfer it or use it with another service as you see fit.</li>
-                                <li><span class="font-medium italic text-zinc-200">Website Content and Design:</span> The custom website we build for you is part of a managed service that operates under our subscription model. This means that the website itself, including the design, content, and functionality, remains a part of our portfolio. If you cancel, the website will be deactivated, but you're always welcome to re-subscribe in the future should your needs change.</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <!-- Accordion Container Ends -->
-            
-        </div>
+            <Accordion></Accordion>
+        </div> 
 
     </div>
 </section>

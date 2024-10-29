@@ -1,0 +1,155 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Customizable Button UI Components for High Conversions | CodeNHammer" description="Create effective CTA buttons with CodeNHammer’s customizable button components. Perfect for driving conversions on small business websites.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Buttons"
+        description="Enhance your call-to-actions with our stylish and functional buttons. Choose between primary and secondary styles to fit your design needs.">
+
+        <Tabs subheading="Primary Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                    Primary Button
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+    Primary Button
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Secondary Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900 bg-neutral-100 hover:bg-neutral-200/50">
+                    Secondary Button
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900 bg-neutral-100 hover:bg-neutral-200/50">
+    Secondary Button
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Outline Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 border rounded-md text-neutral-900 hover:bg-neutral-900/5">
+                    Outline Button
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 border rounded-md text-neutral-900 hover:bg-neutral-900/5">
+    Outline Button
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Link Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide duration-100 text-neutral-900 underline-offset-4 hover:underline">
+                    Link
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide duration-100 text-neutral-900 underline-offset-4 hover:underline">
+    Link
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Ghost Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900 hover:bg-neutral-100">
+                    Ghost Button
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2.5 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900 hover:bg-neutral-100">
+    Ghost Button
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Icon Button">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="max-w-sm p-4 min-h-48 flex items-center justify-center">
+
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900">
+                    <svg class="size-4 mr-1 shrink-0" width="100%" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+                        <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+                        <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+                        <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+                    </svg>
+                    Button
+                </a>
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 rounded-md text-neutral-900">
+    <svg class="size-4 mr-1 shrink-0" width="100%" viewBox="0 0 150 168" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M150 121.5C150 124.667 148.25 127.417 145.583 128.833L79.75 165.833C78.4167 166.833 76.75 167.333 75 167.333C73.25 167.333 71.5834 166.833 70.25 165.833L4.41671 128.833C3.08011 128.132 1.96154 127.077 1.18278 125.784C0.404021 124.491 -0.00506896 123.009 4.74094e-05 121.5V46.5C4.74094e-05 43.3333 1.75005 40.5833 4.41671 39.1666L70.25 2.16663C71.5834 1.16663 73.25 0.666626 75 0.666626C76.75 0.666626 78.4167 1.16663 79.75 2.16663L145.583 39.1666C148.25 40.5833 150 43.3333 150 46.5V121.5ZM75 18.5833L16.6667 51.4166V116.583L75 149.417L133.333 116.583V51.4166L75 18.5833Z" fill="black"/>
+        <path d="M54.8352 78.3125H47.3693C47.233 77.3466 46.9545 76.4886 46.5341 75.7386C46.1136 74.9773 45.5739 74.3295 44.9148 73.7955C44.2557 73.2614 43.4943 72.8523 42.6307 72.5682C41.7784 72.2841 40.8523 72.142 39.8523 72.142C38.0455 72.142 36.4716 72.5909 35.1307 73.4886C33.7898 74.375 32.75 75.6705 32.0114 77.375C31.2727 79.0682 30.9034 81.125 30.9034 83.5455C30.9034 86.0341 31.2727 88.125 32.0114 89.8182C32.7614 91.5114 33.8068 92.7898 35.1477 93.6534C36.4886 94.517 38.0398 94.9489 39.8011 94.9489C40.7898 94.9489 41.7045 94.8182 42.5455 94.5568C43.3977 94.2955 44.1534 93.9148 44.8125 93.4148C45.4716 92.9034 46.017 92.2841 46.4489 91.5568C46.892 90.8295 47.1989 90 47.3693 89.0682L54.8352 89.1023C54.642 90.7045 54.1591 92.25 53.3864 93.7386C52.625 95.2159 51.5966 96.5398 50.3011 97.7102C49.017 98.8693 47.483 99.7898 45.6989 100.472C43.9261 101.142 41.9205 101.477 39.6818 101.477C36.5682 101.477 33.7841 100.773 31.3295 99.3636C28.8864 97.9545 26.9545 95.9148 25.5341 93.2443C24.125 90.5739 23.4205 87.3409 23.4205 83.5455C23.4205 79.7386 24.1364 76.5 25.5682 73.8295C27 71.1591 28.9432 69.125 31.3977 67.7273C33.8523 66.3182 36.6136 65.6136 39.6818 65.6136C41.7045 65.6136 43.5795 65.8977 45.3068 66.4659C47.0455 67.0341 48.5852 67.8636 49.9261 68.9545C51.267 70.0341 52.358 71.358 53.1989 72.9261C54.0511 74.4943 54.5966 76.2898 54.8352 78.3125Z" fill="black"/>
+        <path d="M89.3267 66.0909V101H82.9517L67.7642 79.0284H67.5085V101H60.1278V66.0909H66.6051L81.6733 88.0455H81.9801V66.0909H89.3267Z" fill="black"/>
+        <path d="M95.4247 101V66.0909H102.805V80.4943H117.788V66.0909H125.152V101H117.788V86.5795H102.805V101H95.4247Z" fill="black"/>
+    </svg>
+    Button
+</a>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

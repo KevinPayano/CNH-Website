@@ -1,0 +1,25 @@
+---
+export interface Props {
+  tag: string;
+}
+
+const { tag } = Astro.props;
+
+// Define a mapping of tags to colors
+const tagColors = {
+  astro: 'bg-purple-100 text-purple-800',
+  'cnh tips': 'bg-blue-100 text-blue-800',
+  'learning in public': 'bg-green-100 text-green-800',
+  javascript: 'bg-yellow-100 text-yellow-800',
+  update: 'bg-orange-100 text-orange-800',
+  default: 'bg-neutral-100 text-neutral-800'
+};
+
+// Get the color for the tag, or use default if not found
+const tagColor = tagColors[tag.toLowerCase()] || tagColors.default;
+---
+
+<span class={`text-xs font-medium mr-2 px-2.5 py-0.5 rounded-md ${tagColor}`}>
+  {tag}
+</span>
+

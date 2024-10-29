@@ -1,0 +1,175 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Engaging Hero Section Layouts for Contractor Websites | CodeNHammer" description="Grab attention with CodeNHammer’s hero section layouts. Designed to create strong first impressions for contractor and small business websites.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Hero Layouts"
+        description="Make a powerful first impression with our eye-catching Hero Section. Perfect for showcasing your main message and call-to-action.">
+
+        <Tabs subheading="Hero Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134708/Hero_1_x5ins7.jpg" alt="Hero Layout 1" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section class="relative bg-[url('/image.jpg')] bg-cover bg-center bg-no-repeat">
+    <div class="absolute inset-0 bg-black/50 md:bg-white/0 md:bg-gradient-to-r md:from-black/60"></div>
+
+    <div class="relative mx-auto max-w-screen-xl px-4 py-32 sm:px-6 lg:flex lg:h-screen lg:items-center lg:px-8">
+
+        <div class="max-w-xl text-left">
+
+            <!-- Header & Description Container -->
+            <div class="space-y-2">
+                <h1 class="text-5xl text-neutral-50 font-extrabold">Welcome to <br>CodeNHammer</h1>
+                <p class="text-neutral-100 text-base max-w-lg">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+            </div>
+
+            <!-- Button Group Container -->
+            <div class="mt-8 flex flex-wrap gap-3 text-center">
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide text-neutral-950 transition-colors border-2 border-neutral-50 duration-200 rounded-md bg-neutral-50 hover:bg-neutral-200 hover:border-neutral-200">
+                    Get A Quote
+                </a>
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-50 border-neutral-50 hover:bg-neutral-50/5">
+                    Learn More
+                </a>
+            </div>
+
+        </div>
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Hero Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134708/Hero_2_imneho.jpg" alt="Hero Layout 2" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+                        
+    <!-- Hero Container Start -->
+    <div class="relative grid max-w-screen-xl space-y-8 px-4 py-16 mx-auto lg:gap-8 xl:gap-0 lg:py-32 lg:grid-cols-12">
+
+        <!-- Header & Buttons Container -->
+        <div class="mr-auto space-y-6 place-self-center lg:col-span-7">
+
+            <!-- Header & Description -->
+            <div class="space-y-2 max-w-lg">
+                <h1 class="text-neutral-900 text-5xl font-extrabold">Welcome to CodeNHammer</h1>
+                <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+            </div>
+            
+            <!-- Button Group -->
+            <div class="flex gap-3">
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                    Get A Quote
+                </a>
+                <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                    Learn More
+                </a>
+            </div>
+            
+        </div>
+
+        <!-- Visual Container Start -->
+        <div class="relative grid justify-items-center content-center lg:mt-0 lg:col-span-5">
+
+            <div class="w-full md:w-9/12 lg:w-full">
+
+                <!-- Insert Image Here -->
+                <img src="image.jpg" class="rounded-md" alt='Blank Image' />                        
+
+            </div>
+
+        </div> 
+        <!-- Visual Container End -->  
+
+    </div>
+    <!-- Hero Container End -->
+    
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Hero Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134708/Hero_3_t4xppg.jpg" alt="Hero Layout 3" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+                
+    <!-- Hero Container Start -->
+    <div class="max-w-screen-xl space-y-8 px-4 py-8 mx-auto text-center lg:py-16 lg:px-12">
+
+        <!-- Header & Description Container -->
+        <div class="space-y-4 grid justify-items-center">
+            <h1 class="text-neutral-900 text-4xl font-extrabold sm:text-5xl">Welcome to CodeNHammer</h1>
+            <p class="text-neutral-500 text-base max-w-4xl">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea!</p>
+        </div>
+        
+        <!-- Button Group Container -->
+        <div class="space-y-4 gap-3 w-full justify-center md:space-y-0 md:flex">
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 border-neutral-900 text-neutral-50 rounded-md bg-neutral-900 hover:bg-neutral-800 hover:border-neutral-800">
+                Get A Quote
+            </a>
+            <a href="#" class="w-full md:w-auto cursor-pointer inline-flex items-center justify-center px-4 py-2 text-sm text-center font-medium tracking-wide transition-colors duration-100 border-2 rounded-md text-neutral-900 border-neutral-900 hover:bg-neutral-900/5">
+                Learn More
+            </a>
+        </div> 
+
+        <!-- Visual Container Start -->
+        <div class="relative grid justify-items-center content-center lg:mt-0 lg:col-span-5">
+
+            <div class="w-full">
+                
+                <!-- Insert Image Here -->
+                <img src="image.jpg" class="rounded-md" alt='Blank Image' />
+
+            </div>
+
+        </div> 
+        <!-- Visual Container End -->  
+
+    </div>
+    <!-- Hero Container End -->
+
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

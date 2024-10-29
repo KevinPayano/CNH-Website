@@ -1,0 +1,532 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Testimonial Page Layouts for Building Trust | CodeNHammer" description="Highlight client success stories with CodeNHammer’s testimonial layouts. Designed to build trust with future clients for contractors and small businesses.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="Testimonials Layouts"
+        description="Build social proof with our Testimonial Section. Showcase positive feedback and reviews from satisfied clients.">
+
+        <Tabs subheading="Testimonials Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134710/Testimonial_1_auhpnr.jpg" alt="Testimonials Layout 1">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto text-center lg:py-16 lg:px-6">
+
+        <!-- Testimonial Container Start -->
+        <figure class="max-w-screen-md mx-auto space-y-6">
+
+            <!-- 5 Star Icons Container -->
+            <div class="flex justify-center gap-2 *:size-7 *:text-yellow-500">
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+            </div>
+            
+            <!-- Quote -->
+            <blockquote>
+                <h4 class="text-2xl font-medium text-neutral-900">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</h4>
+            </blockquote>
+
+            <!-- Caption & Image Container Start -->
+            <figcaption class="flex flex-col space-y-1 items-center justify-center space-x-3 md:flex-row md:space-y-0">
+
+                <!-- Insert Profile Image Here -->
+                <img src="image.jpg" class="size-7 rounded-full" alt="Profile picture" />
+                
+                <div class="flex flex-col space-y-1 items-center divide-neutral-300 md:flex-row md:space-y-0 md:divide-x">
+                    <p class="text-base font-medium text-neutral-900 md:pr-3">Fred Smith</p>
+                    <p class="text-sm text-neutral-500 md:pl-3">CEO of BaroneDesigns LLC.</p>
+                </div>
+            </figcaption>
+            <!-- Caption & Image Container End -->
+
+        </figure>
+        <!-- Testimonial Container End -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Testimonials Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134710/Testimonial_2_aldsgl.jpg" alt="Testimonials Layout 2">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="max-w-screen-xl px-4 py-8 mx-auto lg:py-16 lg:px-6">
+
+        <!-- Header & Description Container -->
+        <div class="space-y-2 max-w-screen-sm mb-8 lg:mb-16">
+            <span class="text-sm text-neutral-500 font-medium">Testimonials</span>
+            <h2 class="text-4xl font-bold text-neutral-900">What Our Clients Say</h2>
+            <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea.</p>
+        </div>
+
+        <!-- Testimonial Container Start -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            <!-- Quote 1 Start-->
+            <div>
+                <figure class="max-w-screen-md mx-auto space-y-6">
+    
+                    <!-- 5 Star Icons Container -->
+                    <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                    </div>
+                    
+                    <!-- Quote -->
+                    <blockquote>
+                        <h5 class="text-xl font-medium text-neutral-900">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</h5>
+                    </blockquote>
+    
+                    <!-- Caption & Image Container Start -->
+                    <figcaption class="flex flex-col space-y-1">
+
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-7 rounded-full" alt="Profile picture" />
+                        
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-base font-medium text-neutral-900">Fred Smith</p>
+                            <span class="text-sm text-neutral-500">CEO of BaroneDesigns LLC.</span>
+                        </div>
+                    </figcaption>
+                    <!-- Caption & Image Container End -->
+    
+                </figure>
+            </div>
+            <!-- Quote 1 End -->
+
+            <!-- Quote 2 Start-->
+            <div>
+                <figure class="max-w-screen-md mx-auto space-y-6">
+    
+                    <!-- 5 Star Icons Container -->
+                    <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                    </div>
+                    
+                    <!-- Quote -->
+                    <blockquote>
+                        <h5 class="text-xl font-medium text-neutral-900">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</h5>
+                    </blockquote>
+    
+                    <!-- Caption & Image Container Start -->
+                    <figcaption class="flex flex-col space-y-1">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-7 rounded-full" alt="Profile picture" />
+                        
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-base font-medium text-neutral-900">Tommy Chen</p>
+                            <span class="text-sm text-neutral-500">Junior Developer at Binford Ltd.</span>
+                        </div>
+                    </figcaption>
+                    <!-- Caption & Image Container End -->
+    
+                </figure>
+            </div>
+            <!-- Quote 2 End -->
+
+            <!-- Quote 3 Start-->
+            <div>
+                <figure class="max-w-screen-md mx-auto space-y-6">
+    
+                    <!-- 5 Star Icons Container -->
+                    <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                    </div>
+                    
+                    <!-- Quote -->
+                    <blockquote>
+                        <h5 class="text-xl font-medium text-neutral-900">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</h5>
+                    </blockquote>
+    
+                    <!-- Caption & Image Container Start -->
+                    <figcaption class="flex flex-col space-y-1">
+
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-7 rounded-full" alt="Profile picture" />
+                        
+                        <div class="flex flex-col space-y-1">
+                            <p class="text-base font-medium text-neutral-900">Kelly Richards</p>
+                            <span class="text-sm text-neutral-500">CFO at Big Kahuna Burger Ltd.</span>
+                        </div>
+                    </figcaption>
+                    <!-- Caption & Image Container End -->
+    
+                </figure>
+            </div>
+            <!-- Quote 3 End -->
+            
+        </div>
+        <!-- Testimonial Container End -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="Testimonials Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134711/Testimonial_3_z7xnna.jpg" alt="Testimonials Layout 3">
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+
+        <!-- Header & Description Container -->
+        <div class="mx-auto mb-8 space-y-2 max-w-screen-md text-center">
+            <span class="text-sm text-neutral-500 font-medium">Testimonials</span>
+            <h2 class="text-4xl font-bold text-neutral-900">What Our Clients Say</h2>
+            <p class="text-neutral-500 text-base">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nesciunt illo tenetur fuga ducimus numquam ea.</p>
+        </div> 
+
+        <!-- Testimonial Grid Container Start -->
+        <div class="grid gap-8 lg:grid-cols-3">
+
+            <!-- Column 1 -->
+            <div class="space-y-6">
+
+                <!-- Quote 1 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <figcaption class="flex items-center space-x-3">
+
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Fred Smith</p>
+                            <span class="text-sm text-neutral-500">CTO at Acme Co.</span>
+                        </div>
+                    </figcaption> 
+
+                </figure>
+                <!-- Quote 1 Container End -->
+
+                <!-- Quote 2 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Tommy Chen</p>
+                            <span class="text-sm text-neutral-500">Software Engineer at Binford Ltd.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 2 Container End -->
+
+                <!-- Quote 3 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Mike Smith</p>
+                            <span class="text-sm text-neutral-500">CEO at Abstergo Ltd.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 3 Container End -->
+
+            </div>
+
+            <!-- Column 2 -->
+            <div class="space-y-6">
+
+                <!-- Quote 4 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Kelly Richards</p>
+                            <span class="text-sm text-neutral-500">Junior Designer at Biffco Enterprises LLC</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 4 Container End -->
+
+                <!-- Quote 5 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote class="my-4">
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                        <p class="text-base text-neutral-500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Alexis Jordan</p>
+                            <span class="text-sm text-neutral-500">CFO at Big Kahuna Burger Ltd.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 5 Container End -->
+
+                <!-- Quote 6 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote class="my-4">
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                        <p class="text-base text-neutral-500">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Bonnie Green</p>
+                            <span class="text-sm text-neutral-500">Creative Director at Barone LLC.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 6 Container End -->
+
+            </div>
+
+            <!-- Column 3 -->
+            <div class="space-y-6">
+
+                <!-- Quote 7 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">John Carlson</p>
+                            <span class="text-sm text-neutral-500">Front-End Engineer at MikeDesigns Co.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 7 Container End -->
+
+                <!-- Quote 8 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Kari Miller</p>
+                            <span class="text-sm text-neutral-500">Software Architect at Mobile Inc.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 8 Container End -->
+
+                <!-- Quote 9 Container Start -->
+                <figure class="p-6 bg-neutral-50 border border-neutral-200 rounded">
+
+                    <!-- Star & Quote Container -->
+                    <blockquote>
+                        <div class="flex gap-2 *:size-7 *:text-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 372.686L380.83 448l-33.021-142.066L458 210.409l-145.267-12.475L256 64l-56.743 133.934L54 210.409l110.192 95.525L131.161 448z" fill="currentColor"/></svg>
+                        </div>
+                        <p class="text-base text-neutral-500 my-4">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare."</p>
+                    </blockquote>
+
+                    <!-- Name & Image Container -->
+                    <figcaption class="flex items-center space-x-3">
+                        
+                        <!-- Insert Profile Image Here -->
+                        <img src="image.jpg" class="size-9 rounded-full" alt="Profile picture" />
+                        
+                        <div class="space-y-0.5">
+                            <p class="text-base text-neutral-900 font-medium">Susan Peterson</p>
+                            <span class="text-sm text-neutral-500">Junior Developer at Binford Ltd.</span>
+                        </div>
+                    </figcaption>
+
+                </figure>
+                <!-- Quote 9 Container End -->
+
+            </div>
+
+        </div>  
+        <!-- Testimonial Grid Container Start -->
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

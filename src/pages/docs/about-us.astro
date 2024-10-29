@@ -1,0 +1,176 @@
+---
+import { Code } from 'astro:components';
+
+//Components
+import Navigation4 from "../../components/Navigation.astro";
+import Tabs from "../../components/Tabs.astro";
+
+//Layouts
+import MainLayout from "../../layouts/MainLayout.astro";
+import DocsLayout from "../../layouts/DocsLayout.astro";
+
+---
+
+<MainLayout title="Professional About Us Page Layouts for Small Businesses | CodeNHammer" description="Create compelling About Us pages with CodeNHammer’s custom-designed layouts for small businesses and contractors. Convey professionalism with ease.">
+    
+    <Navigation4></Navigation4>
+    <DocsLayout
+        header="About Us Layouts"
+        description="Tell your story with our About Us Section. Share your mission, values, and background to connect with your audience.">
+
+        <Tabs subheading="About Us Section 1">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134705/About_1_laofuh.jpg" alt="About Layout 1" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section>
+    <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+
+        <div class="gap-16 lg:grid lg:grid-cols-2">
+
+            <!-- Tagline & Header Container -->
+            <div class="space-y-2">
+                <span class="text-sm font-medium text-neutral-500">About Us</span>
+                <h2 class="text-4xl font-bold text-neutral-900">Tell the story of how your company came about</h2>
+            </div>
+    
+            <!-- Description Container -->
+            <div class="mt-4 space-y-4 text-neutral-500 text-base lg:mt-0">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque.</p>
+                <p>Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur eget commodo vitae. Amet pellentesque sit pulvinar lorem mi a, euismod risus rhoncus. Elementum ullamcorper nec, habitasse vulputate. Eget dictum quis est sed egestas tellus, a lectus. Quam ullamcorper in fringilla arcu aliquet fames arcu.Lacinia eget faucibus urna, nam risus nec elementum cras porta.</p>
+                <p>Sed elementum, sed dolor purus dolor dui. Ut dictum nulla pulvinar vulputate sit sagittis in eleifend dignissim. Natoque mauris cras molestie velit. Maecenas eget adipiscing quisque viverra lectus arcu, tincidunt ultrices pellentesque.</p>
+            </div>
+        
+        <!-- Insert Image Here -->
+        <img src="image.jpg" class="mx-auto mt-8 rounded-md" alt="Blank image" />
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="About Us Section 2">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134705/About_2_tmp8ef.jpg" alt="About Layout 2" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section> 
+    <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+
+        <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
+
+            <!-- Details Container Start -->
+            <div class="text-neutral-500 space-y-8">
+
+                <!-- Header & Description -->
+                <div class="space-y-2">
+                    <span class="text-sm font-medium text-neutral-500">About Us</span>
+                    <h2 class="text-4xl tracking-tight font-bold text-neutral-900">Highlight company impact by the numbers</h2>
+                    <p class="text-base text-neutral-500">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.</p>
+                </div>
+
+                <!-- List Start -->
+                <div class="col-span-2 space-y-8 md:grid md:grid-cols-2 md:gap-12 md:space-y-0">
+
+                    <!-- Stat 1 -->
+                    <div class="space-y-2">
+                        <h3 class="text-3xl text-neutral-900 font-semibold">$30M</h3>
+                        <p class="text-base text-neutral-500">Customer savings</p>
+                    </div>
+
+                    <!-- Stat 2 -->
+                    <div class="space-y-2">
+                        <h3 class="text-3xl text-neutral-900 font-semibold">10m+</h3>
+                        <p class="text-base text-neutral-500">Hours saved</p>
+                    </div>
+
+                    <!-- Stat 3 -->
+                    <div class="space-y-2">
+                        <h3 class="text-3xl text-neutral-900 font-semibold">200%</h3>
+                        <p class="text-base text-neutral-500">Year on year growth</p>
+                    </div>
+
+                    <!-- Stat 4 -->
+                    <div class="space-y-2">
+                        <h3 class="text-3xl text-neutral-900 font-semibold">5k+</h3>
+                        <p class="text-base text-neutral-500">Downloads</p>
+                    </div>
+                    
+                </div>
+                <!-- List End -->
+
+            </div>
+            <!-- Details Container End -->
+
+            <!-- Insert Image Here -->
+            <img src="image.jpg" class="my-8 w-full rounded-md lg:mb-0 lg:flex" alt="Blank image" />
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+        <Tabs subheading="About Us Section 3">
+
+            <!-- Preview Tab Start -->
+            <div slot="previewTab" class="w-full p-4">
+
+                <img src="https://res.cloudinary.com/codenhammer/image/upload/v1729134705/About_3_kacnlq.jpg" alt="About Layout 3" />
+
+            </div>
+            <!-- Preview Tab End -->
+
+            <!-- Code Tab -->
+
+            <Code slot='codeTab' class="p-4 rounded-md absolute inset-0 h-full" code={`<section> 
+    <div class="py-8 px-4 mx-auto space-y-12 max-w-screen-xl lg:space-y-20 sm:py-16 lg:px-6">
+
+        <div class="gap-8 items-center lg:grid lg:grid-cols-2 xl:gap-16">
+
+            <!-- Details Container Start -->
+            <div class="text-neutral-500 space-y-8">
+
+                <!-- Tagline & Header Container -->
+                <div class="space-y-2">
+                    <span class="text-sm font-medium text-neutral-500">About Us</span>
+                    <h2 class="text-4xl font-bold text-neutral-900">Tell the story of how your company came about</h2>
+                </div>
+
+                <!-- Description Container -->
+                <div class="mt-4 space-y-4 text-neutral-500 text-base lg:mt-0">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce varius faucibus massa sollicitudin amet augue. Nibh metus a semper purus mauris duis. Lorem eu neque, tristique quis duis. Nibh scelerisque ac adipiscing velit non nulla in amet pellentesque. Sit turpis pretium eget maecenas. Vestibulum dolor mattis consectetur eget commodo vitae.</p>
+                    <p>Amet pellentesque sit pulvinar lorem mi a, euismod risus rhoncus. Elementum ullamcorper nec, habitasse vulputate. Eget dictum quis est sed egestas tellus, a lectus. Quam ullamcorper in fringilla arcu aliquet fames arcu.Lacinia eget faucibus urna, nam risus nec elementum cras porta. Sed elementum, sed dolor purus dolor dui. Ut dictum nulla pulvinar vulputate sit sagittis in eleifend dignissim. Natoque mauris cras molestie velit. Maecenas eget adipiscing quisque viverra lectus arcu, tincidunt ultrices pellentesque.</p>
+                </div>
+                
+            </div>
+            <!-- Details Container End -->
+
+            <!-- Insert Image Here -->
+            <img src="image.jpg" class="my-8 w-full rounded-md lg:mb-0 lg:flex" alt="Blank image" />
+
+        </div>
+
+    </div>
+</section>`} lang="html" theme="night-owl" />
+
+        </Tabs>
+
+    </DocsLayout>
+
+</MainLayout>

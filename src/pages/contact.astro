@@ -1,14 +1,17 @@
 ---
+//Components
+import Navigation4 from "../components/Navigation.astro";
+import Footer1 from "../components/Footer.astro";
+
+//Layouts
 import MainLayout from "../layouts/MainLayout.astro";
-import Navigation from "../components/Navigation.astro";
-import ContactForm from "../layouts/ContactForm.astro";
-import Footer from "../layouts/Footer.astro";
+import ContactSection1 from "../layouts/ContactSection.astro";
+
 ---
 
-<MainLayout title="Contact Us | CodeNHammer" metaDescription="Ready to elevate your construction business online? Connect with CodeNHammer today! Reach out for personalized, expert web development services tailored to your specific needs. Let's discuss how we can transform your digital presence and drive your business forward. Contact us now!">
+<MainLayout title="Contact Us | CodeNHammer" description="Get in touch with CodeNHammer for any inquiries or feedback. We're here to help you with your UI component needs.">
+    <Navigation4></Navigation4>
+    <ContactSection1></ContactSection1>
+    <Footer1></Footer1>
 
-	<Navigation></Navigation>
-	<ContactForm></ContactForm>
-	<Footer></Footer>
-	
 </MainLayout>
