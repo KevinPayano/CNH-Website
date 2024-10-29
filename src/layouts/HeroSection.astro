@@ -5,26 +5,6 @@ import PrimaryBtn1 from "../components/PrimaryBtn-1.astro";
 import SecondaryBtn1 from "../components/SecondaryBtn-1.astro";
 ---
 
-<style>
-    @keyframes animateLine {
-        0% {
-            stroke-dashoffset: 100%;
-            stroke-opacity: 1;
-        }
-        100% {
-            stroke-dashoffset: -100%;
-            stroke-opacity: 0;
-        }
-    }
-
-    .animate-path {
-        stroke: url(#blue-gradient);
-        stroke-dasharray: 100%;
-        stroke-dashoffset: 100%;
-        animation: animateLine 2s ease infinite;
-    }
-</style>
-
 <section class="min-h-screen flex items-center overflow-hidden">
 
     <!-- Background Grid Start -->
