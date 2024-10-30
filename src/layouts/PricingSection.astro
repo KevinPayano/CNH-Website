@@ -1,74 +1,86 @@
 ---
 //Components
 import PrimaryBtn1 from "../components/PrimaryBtn-1.astro";
+import SecondaryBtn1 from "../components/SecondaryBtn-1.astro";
 ---
 
-<section id="pricingSection"class="bg-white">
+<section id="pricingSection" class="bg-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-6">
 
         <!-- Tagline & Header Container -->
-        <div class="max-w-screen-md space-y-2 mb-8">
-            <span class="text-sm font-medium text-blue-500">Pricing</span>
+        <div class="max-w-screen-md text-center mx-auto space-y-2 mb-8">
+            <span class="text-sm font-medium text-blue-500">Simple, Transparent Pricing</span>
             <h2 class="text-neutral-900 text-4xl font-bold">Launch Offer: Get CodeNHammer at an Exclusive Price!</h2>
         </div>
 
-        <!-- Pricing Card -->
-        <div class="bg-white rounded-md border border-blue-600 lg:grid lg:grid-cols-3">
-            <div class="col-span-2 p-6 lg:p-8">
-                <h3 class="mb-1 text-2xl font-semibold text-gray-900">Designed to save you time and elevate your work.</h3>
+        <!-- Pricing Card Container Start-->
+        <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 lg:space-y-0">
+            
+            <!-- Pricing Card 1 -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-neutral-900 bg-white rounded-md border border-neutral-200 xl:p-8">
+                <h3 class="mb-4 text-2xl font-semibold">Starter Tier</h3>
+                <p class="font-light text-neutral-500 sm:text-lg">Free Forever</p>
                 
-                <div class="grid gap-4 mt-4 lg:mt-6 sm:grid-cols-2 md:grid-cols-3">
-                    
-                    <!-- List -->
-                    <ul role="list" class="space-y-4">
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">40+ Layouts</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">30+ Components</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">Google Analytics Built-in</span>
-                        </li>
-                    </ul>
-
-                    <!-- List -->
-                    <ul role="list" class="space-y-4">
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">Netlify Forms Built-in</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">CNH Figma Design File</span>
-                        </li>
-                        <li class="flex space-x-2.5">
-                            <!-- Icon -->
-                            <svg class="flex-shrink-0 size-5 text-green-600" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 512 512"><path d="M256 48C141.1 48 48 141.1 48 256s93.1 208 208 208 208-93.1 208-208S370.9 48 256 48zm106.5 150.5L228.8 332.8h-.1c-1.7 1.7-6.3 5.5-11.6 5.5-3.8 0-8.1-2.1-11.7-5.7l-56-56c-1.6-1.6-1.6-4.1 0-5.7l17.8-17.8c.8-.8 1.8-1.2 2.8-1.2 1 0 2 .4 2.8 1.2l44.4 44.4 122-122.9c.8-.8 1.8-1.2 2.8-1.2 1.1 0 2.1.4 2.8 1.2l17.5 18.1c1.8 1.7 1.8 4.2.2 5.8z" fill="currentColor"/></svg>
-                            <span class="leading-tight text-neutral-500">1 Developer License</span>
-                        </li>
-                    </ul>
-
+                <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-bold">$0</span>
                 </div>
 
+                <hr class="mb-8">
+
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left">
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>Free Components</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>Basic Components: Accordion, Buttons, Navigation, Dropdown</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>Access to component updates</span>
+                    </li>
+                </ul>
+                <SecondaryBtn1 href="/docs/accordion">Browse Docs</SecondaryBtn1>
             </div>
 
-            <div class="flex p-6 text-center rounded-r-md bg-blue-50 lg:p-8">
-                <div class="self-center w-full">
-                    <div class="text-5xl font-semibold text-neutral-900">$49</div>
-                    <div class="mt-1 mb-4 text-neutral-500 text-light">Lifetime access</div>
-                    <PrimaryBtn1 href={"#"}>Get CNH Now</PrimaryBtn1>
+            <!-- Pricing Card 2 -->
+            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-neutral-900 bg-white rounded-md border border-neutral-200 xl:p-8">
+                <h3 class="mb-4 text-2xl font-semibold">Premium Tier</h3>
+                <p class="font-light text-neutral-500 sm:text-lg">One-Time Payment</p>
+                
+                <div class="flex justify-center items-baseline my-8">
+                    <span class="mr-2 text-5xl font-bold">$49</span>
                 </div>
+
+                <hr class="mb-8">
+
+                <!-- List -->
+                <ul role="list" class="mb-8 space-y-4 text-left">
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>All access to Components, Layouts & Templates</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>Premium Layouts: About Us, Contact, Services, CTA</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
+                        <span>All updates, including new premium layouts and templates</span>
+                    </li>
+                </ul>
+                <PrimaryBtn1 href="#">Buy Now</PrimaryBtn1>
             </div>
 
         </div>
+        <!-- Pricing Card Container End-->
     </div>
 </section>
