@@ -1,22 +1,29 @@
 ---
 //Components
+import CTAAnimation from "../components/CTAAnimation.astro";
 import PrimaryBtn1 from "../components/PrimaryBtn-1.astro";
 ---
 
-<section class="py-8 px-4 mx-auto sm:py-16 lg:px-12 lg:py-28">
+<section class="relative py-8 px-4 mx-auto sm:py-16 lg:px-12 lg:py-28">
+
+    <div class="absolute z-10 w-full mx-auto inset-0 opacity-70">
+        <CTAAnimation />
+    </div>
+
     <!-- CTA Container Start -->
-    <div class="bg-blue-500/5 border border-blue-600 rounded-md mx-auto text-center max-w-screen-lg">
+    <div class="bg-blue-500/5 backdrop-blur-sm relative z-20 border border-blue-600 rounded-md mx-auto text-center max-w-screen-lg">
         <div class="bg-[linear-gradient(to_right,#007bff25_1px,transparent_1px),linear-gradient(to_bottom,#007bff25_1px,transparent_1px)] bg-[size:80px_100px] [mask-image:radial-gradient(ellipse_55%_90%_at_50%_50%,#000_90%,transparent_100%)]">
             
             <div class="py-8 px-4 sm:py-16 lg:px-6">
                 <div class="mx-auto mb-6 max-w-screen-sm space-y-2">
                     <h2 class="text-4xl font-bold text-neutral-900">Ready to Get Started?</h2>
-                    <p class="text-neutral-500 text-base">Access a growing library of professional layouts and templates made for small business websites. Join the community of designers speeding up their workflow with CodeNHammer.</p>
+                    <p class="text-neutral-800 text-base">Access a growing library of professional layouts and templates made for small business websites. Join the community of designers speeding up their workflow with CodeNHammer.</p>
                 </div>
-                <PrimaryBtn1 href={"#"}>Upgrade to Premium</PrimaryBtn1>
+                <PrimaryBtn1 href={"/#pricingSection"}>Upgrade to Premium</PrimaryBtn1>
             </div>
             
         </div>
     </div>
     <!-- CTA Container End -->
+
 </section>

@@ -11,7 +11,7 @@ export default {
 			},
 
 			animation: {
-				'infinite-scroll': 'infinite-scroll 20s linear infinite',
+				'infinite-scroll': 'infinite-scroll 10s linear infinite',
 			  },
 
 			keyframes: {
@@ -22,7 +22,7 @@ export default {
 			}  
 		},
 		animation: {
-			'skew-scroll': 'skew-scroll 20s linear infinite',
+			'skew-scroll': 'skew-scroll 30s linear infinite',
 		  },
 		  keyframes: {
 			'skew-scroll': {
