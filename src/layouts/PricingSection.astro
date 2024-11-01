@@ -4,71 +4,70 @@ import PrimaryBtn1 from "../components/PrimaryBtn-1.astro";
 import SecondaryBtn1 from "../components/SecondaryBtn-1.astro";
 ---
 
-<section id="pricingSection" class="bg-white">
+<section id="pricingSection">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-28 lg:px-6">
 
         <!-- Tagline & Header Container -->
-        <div class="max-w-screen-md text-center mx-auto space-y-2 mb-8">
+        <div class="max-w-screen-md space-y-2 mb-8">
             <span class="text-sm font-medium text-blue-500">Simple, Transparent Pricing</span>
             <h2 class="text-neutral-900 text-4xl font-bold">Get CodeNHammer at an Exclusive Price!</h2>
         </div>
 
         <!-- Pricing Card Container Start-->
-        <div class="space-y-8 lg:grid lg:grid-cols-2 sm:gap-6 lg:space-y-0">
+        <div class="mb-4 lg:mb-8 space-y-8 lg:grid lg:grid-cols-2 md:gap-12 xl:gap-16 lg:space-y-0">
             
-            <!-- Pricing Card 1 -->
-            <div class="flex flex-col p-6 mx-auto max-w-lg text-center text-neutral-900 bg-white rounded-md border border-neutral-200 xl:p-8">
-                <h3 class="mb-4 text-2xl font-semibold">Starter Tier</h3>
-                <p class="font-light text-neutral-500 sm:text-lg">Free Forever</p>
-                
-                <div class="flex justify-center items-baseline my-8">
-                    <span class="mr-2 text-5xl font-bold">$0</span>
+            <!-- Pricing Card 1 Start-->
+            <div class="flex flex-col max-w-lg text-neutral-900">
+                <h3 class="font-semibold text-neutral-500 uppercase">Starter</h3>
+                <div class="flex items-baseline my-4">
+                    <span class="mr-2 text-5xl font-bold text-neutral-900">$0</span>
                 </div>
-
-                <hr class="mb-8">
-
+                <p class="text-neutral-500 sm:text-lg">Free Forever</p>
                 <!-- List -->
-                <ul role="list" class="mb-8 space-y-4 text-left">
+                <ul role="list" class="my-8 space-y-4 text-left">
                     <li class="flex items-center space-x-3">
                         <!-- Icon -->
-                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Free Access to Components</span>
+                        <svg class="flex-shrink-0 size-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042a.75.75 0 0 0-1.042-.018L6.75 9.19L5.28 7.72a.75.75 0 0 0-1.042.018a.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+                        <span>Free Components</span>
                     </li>
                     <li class="flex items-center space-x-3">
                         <!-- Icon -->
-                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>Access to Component Updates</span>
+                        <svg class="flex-shrink-0 size-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042a.75.75 0 0 0-1.042-.018L6.75 9.19L5.28 7.72a.75.75 0 0 0-1.042.018a.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+                        <span>Access to component updates</span>
                     </li>
                 </ul>
-                <SecondaryBtn1 href="/docs/accordion">Browse Docs</SecondaryBtn1>
+                <SecondaryBtn1 href="/docs/accordion">Browse Components</SecondaryBtn1>
             </div>
+            <!-- Pricing Card 1 End-->
 
-            <!-- Pricing Card 2 -->
-            <div class="flex flex-col p-6 mx-auto max-w-md text-center text-neutral-900 bg-white rounded-md border border-neutral-200 xl:p-8">
-                <h3 class="mb-4 text-2xl font-semibold">Premium Tier</h3>
-                <p class="font-light text-neutral-500 sm:text-lg">One-Time Payment</p>
-                
-                <div class="flex justify-center items-baseline my-8">
-                    <span class="mr-2 text-5xl font-bold">$49</span>
+            <!-- Pricing Card -->
+            <div class="flex flex-col max-w-lg text-neutral-900">
+                <h3 class="font-semibold text-neutral-500 uppercase">Premium</h3>
+                <div class="flex items-baseline my-4">
+                    <span class="mr-2 text-5xl font-bold text-neutral-900">$49</span>
                 </div>
-
-                <hr class="mb-8">
-
+                <p class="text-neutral-500 sm:text-lg">All Access</p>
                 <!-- List -->
-                <ul role="list" class="mb-8 space-y-4 text-left">
+                <ul role="list" class="my-8 space-y-4 text-left">
                     <li class="flex items-center space-x-3">
                         <!-- Icon -->
-                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>All access to Components, Layouts & Templates</span>
+                        <svg class="flex-shrink-0 size-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042a.75.75 0 0 0-1.042-.018L6.75 9.19L5.28 7.72a.75.75 0 0 0-1.042.018a.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+                        <span>All Components, Layouts, and Templates</span>
                     </li>
                     <li class="flex items-center space-x-3">
                         <!-- Icon -->
-                        <svg class="flex-shrink-0 size-5 text-green-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"></path></svg>
-                        <span>All updates, including new premium Layouts and Templates</span>
+                        <svg class="flex-shrink-0 size-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042a.75.75 0 0 0-1.042-.018L6.75 9.19L5.28 7.72a.75.75 0 0 0-1.042.018a.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+                        <span>Access to Figma CNH Design File</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <!-- Icon -->
+                        <svg class="flex-shrink-0 size-4 text-green-500" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 16 16"><path fill="currentColor" d="M8 16A8 8 0 1 1 8 0a8 8 0 0 1 0 16m3.78-9.72a.75.75 0 0 0-.018-1.042a.75.75 0 0 0-1.042-.018L6.75 9.19L5.28 7.72a.75.75 0 0 0-1.042.018a.75.75 0 0 0-.018 1.042l2 2a.75.75 0 0 0 1.06 0Z"/></svg>
+                        <span>All updates, including new layouts, templates, and Figma file</span>
                     </li>
                 </ul>
-                <PrimaryBtn1 href="#">Buy Now</PrimaryBtn1>
+                <PrimaryBtn1>Buy Premium</PrimaryBtn1>
             </div>
+            <!-- Pricing Card 2 End-->
 
         </div>
         <!-- Pricing Card Container End-->
